@@ -7,7 +7,9 @@
     <style>
         body {
             font-family: 'Tajawal', sans-serif;
-            background-color: #f0f2f5;
+            background: url('https://img.freepik.com/free-photo/cybersecurity-concept-illustration_23-2151883573.jpg?t=st=1740086465~exp=1740090065~hmac=b0f44498dd506ec312bc02d1fecf9b9dfdfe09b90ac0a680c6b5c04f167b9a36&w=1380') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
             padding: 20px;
             direction: rtl;
             text-align: right;
@@ -15,43 +17,55 @@
         .container {
             max-width: 900px;
             margin: auto;
-            background: white;
+            background: rgba(0, 0, 0, 0.8);
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            backdrop-filter: blur(10px);
         }
         .header {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding-bottom: 10px;
-            border-bottom: 2px solid #ddd;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.5);
         }
         .logo {
             width: 70px;
         }
         .question-box {
             margin-bottom: 15px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            padding: 15px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+        .question-box:hover {
+            transform: scale(1.05);
         }
         button {
-            background-color: #1a73e8;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
             color: white;
             border: none;
             padding: 10px 15px;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
-            margin-top: 10px;
+            font-weight: bold;
+            transition: background 0.3s ease-in-out, transform 0.2s;
         }
         button:hover {
-            background-color: #1557b0;
+            background: linear-gradient(90deg, #0072ff, #00c6ff);
+            transform: scale(1.05);
         }
         input[type="number"] {
             width: 50px;
             padding: 5px;
             margin-right: 10px;
+            border-radius: 5px;
+            border: none;
+            text-align: center;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -151,41 +165,6 @@
                 });
 
                 quizContainer.appendChild(questionDiv);
-            });
-        }
-
-        function submitQuiz() {
-            let correct = 0;
-            let wrong = 0;
-            let wrongAnswers = [];
-
-            selectedQuestions.forEach(q => {
-                const selectedOption = document.querySelector(`input[name="question${q.id}"]:checked`);
-                if (selectedOption) {
-                    if (selectedOption.value === q.correct_answer) {
-                        correct++;
-                    } else {
-                        wrong++;
-                        wrongAnswers.push({ question: q.question, correct: q.correct_answer });
-                    }
-                } else {
-                    wrong++;
-                    wrongAnswers.push({ question: q.question, correct: q.correct_answer });
-                }
-            });
-
-            document.getElementById('result').innerText = `✅ صحيحة: ${correct} ❌ خاطئة: ${wrong}`;
-            displayWrongAnswers(wrongAnswers);
-        }
-
-        function displayWrongAnswers(wrongAnswers) {
-            const wrongContainer = document.getElementById('wrong-answers');
-            wrongContainer.innerHTML = `<h3>❌ الأسئلة التي أجبت عليها خطأ:</h3>`;
-
-            wrongAnswers.forEach(q => {
-                wrongContainer.innerHTML += `
-                    <p>❌ ${q.question}<br>✅ الإجابة الصحيحة: ${q.correct}</p>
-                `;
             });
         }
 
