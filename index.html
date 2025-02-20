@@ -203,15 +203,25 @@
     </div>
 
     <script>
-        let questions = JSON.parse(localStorage.getItem('questions')) || [];
+        // Firebase Setup
+        import { initializeApp } from "firebase/app";
+        import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc, updateDoc } from "firebase/firestore"; 
 
-        // دالة لحفظ الأسئلة في localStorage
-        function saveToLocalStorage() {
-            localStorage.setItem('questions', JSON.stringify(questions));
-        }
+        const firebaseConfig = {
+            apiKey: "AIzaSyD4tkNeb8NHfs-pNlRESEyOtVe2jBxVZ6s",
+            authDomain: "phantomforcemsq.firebaseapp.com",
+            projectId: "phantomforcemsq",
+            storageBucket: "phantomforcemsq.firebasestorage.app",
+            messagingSenderId: "69561968302",
+            appId: "1:69561968302:web:84103708b67a1195feaf3f",
+            measurementId: "G-DG4J3RJWHX"
+        };
 
-        // دالة لإضافة سؤال جديد
-        function addQuestion() {
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // دالة لإضافة سؤال جديد إلى Firestore
+        async function addQuestion() {
             const questionText = document.getElementById('question').value;
             const options = [
                 document.getElementById('option1').value,
@@ -226,80 +236,104 @@
                 return;
             }
 
-            // إضافة السؤال إلى الأسئلة المخزنة
-            questions.push({
-                question: questionText,
-                options: options,
-                correct: parseInt(correctAnswer)
-            });
-
-            // حفظ البيانات في localStorage
-            saveToLocalStorage();
-            displayQuestions();
+            try {
+                await addDoc(collection(db, "questions"), {
+                    question: questionText,
+                    options: options,
+                    correct: parseInt(correctAnswer)
+                });
+                alert("تم إضافة السؤال بنجاح!");
+                displayQuestions();  // تحديث عرض الأسئلة
+            } catch (e) {
+                console.error("خطأ في إضافة السؤال: ", e);
+            }
         }
 
-        // دالة لعرض الأسئلة المخزنة في localStorage
-        function displayQuestions() {
+        // دالة لعرض الأسئلة من Firestore
+        async function displayQuestions() {
+            const querySnapshot = await getDocs(collection(db, "questions"));
             const container = document.getElementById('questionsContainer');
             container.innerHTML = '';
 
-            questions.forEach((q, index) => {
+            querySnapshot.forEach((doc, index) => {
+                const q = doc.data();
                 const questionDiv = document.createElement('div');
                 questionDiv.innerHTML = `
                     <h3>السؤال ${index + 1}: ${q.question}</h3>
                     <div>${q.options.map((option, i) => `<div>${i === q.correct ? `<span class="correct-answer">✓</span>` : ''} ${option}</div>`).join('')}</div>
+                    <button onclick="deleteQuestion('${doc.id}')">حذف السؤال</button>
+                    <button onclick="editQuestion('${doc.id}', '${q.question}', ${JSON.stringify(q.options)}, ${q.correct})">تعديل السؤال</button>
                 `;
                 container.appendChild(questionDiv);
             });
         }
 
-        // دالة لمسح جميع الأسئلة
-        function clearQuestions() {
-            questions = [];
-            saveToLocalStorage();
-            displayQuestions();
+        // دالة لحذف السؤال من Firestore
+        async function deleteQuestion(id) {
+            try {
+                await deleteDoc(doc(db, "questions", id));
+                alert("تم حذف السؤال!");
+                displayQuestions();  // تحديث عرض الأسئلة
+            } catch (e) {
+                console.error("خطأ في حذف السؤال: ", e);
+            }
         }
 
-        // دالة لبدء الاختبار
-        function startTest() {
-            let numQuestions = parseInt(document.getElementById('questionCount').value);
+        // دالة لتعديل السؤال
+        function editQuestion(id, question, options, correct) {
+            document.getElementById('question').value = question;
+            document.getElementById('option1').value = options[0];
+            document.getElementById('option2').value = options[1];
+            document.getElementById('option3').value = options[2];
+            document.getElementById('option4').value = options[3];
+            document.querySelector(`input[name="correct"][value="${correct}"]`).checked = true;
 
-            if (isNaN(numQuestions) || numQuestions < 1 || numQuestions > 150) {
-                alert('يرجى إدخال رقم بين 1 و 150');
+            const editButton = document.querySelector('button');
+            editButton.onclick = function () {
+                updateQuestion(id);
+            };
+        }
+
+        // دالة لتحديث السؤال
+        async function updateQuestion(id) {
+            const questionText = document.getElementById('question').value;
+            const options = [
+                document.getElementById('option1').value,
+                document.getElementById('option2').value,
+                document.getElementById('option3').value,
+                document.getElementById('option4').value
+            ];
+            const correctAnswer = document.querySelector('input[name="correct"]:checked')?.value;
+
+            if (!questionText || options.some(option => !option) || correctAnswer === undefined) {
+                alert('الرجاء تعبئة جميع الحقول وتحديد الإجابة الصحيحة');
                 return;
             }
 
-            const shuffledQuestions = questions.sort(() => 0.5 - Math.random()).slice(0, Math.min(numQuestions, questions.length));
-
-            document.getElementById('testContainer').style.display = "block";
-            document.getElementById('testQuestions').innerHTML = shuffledQuestions.map((q, index) => `
-                <h3>${q.question}</h3>
-                ${q.options.map((option, i) => `<label><input type="radio" name="answer${index}" value="${i}"> ${option}</label><br>`).join('')}
-            `).join('');
+            try {
+                await updateDoc(doc(db, "questions", id), {
+                    question: questionText,
+                    options: options,
+                    correct: parseInt(correctAnswer)
+                });
+                alert("تم تعديل السؤال بنجاح!");
+                displayQuestions();  // تحديث عرض الأسئلة
+            } catch (e) {
+                console.error("خطأ في تعديل السؤال: ", e);
+            }
         }
 
-        // دالة لتقديم الاختبار
-        function submitTest() {
-            let score = 0;
-            const testQuestions = document.querySelectorAll('[id^="testQuestions"]');
-
-            testQuestions.forEach((q, index) => {
-                const selected = document.querySelector(`input[name="answer${index}"]:checked`);
-                if (selected && parseInt(selected.value) === questions[index].correct) {
-                    score++;
-                }
+        // دالة لمسح جميع الأسئلة من Firestore
+        async function clearQuestions() {
+            const querySnapshot = await getDocs(collection(db, "questions"));
+            querySnapshot.forEach(async (doc) => {
+                await deleteDoc(doc.ref);
             });
-
-            document.getElementById('testResult').innerText = `نتيجتك: ${score} من ${questions.length}`;
+            alert("تم مسح جميع الأسئلة!");
+            displayQuestions();  // تحديث عرض الأسئلة
         }
 
-        // دالة لإعادة الاختبار
-        function resetTest() {
-            document.getElementById('testContainer').style.display = "none";
-            document.getElementById('testResult').innerText = '';
-        }
-
-        // عرض الأسئلة المحفوظة عند تحميل الصفحة
+        // عرض الأسئلة عند تحميل الصفحة
         displayQuestions();
     </script>
 </body>
