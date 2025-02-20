@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: 'Tajawal', sans-serif;
-            background: url('https://img.freepik.com/free-photo/cybersecurity-concept-illustration_23-2151883573.jpg?t=st=1740086465~exp=1740090065~hmac=b0f44498dd506ec312bc02d1fecf9b9dfdfe09b90ac0a680c6b5c04f167b9a36&w=1380') no-repeat center center fixed;
+            background: url('https://img.freepik.com/free-photo/cybersecurity-concept-illustration_23-2151883573.jpg') no-repeat center center fixed;
             background-size: cover;
             color: white;
             padding: 20px;
@@ -165,6 +165,41 @@
                 });
 
                 quizContainer.appendChild(questionDiv);
+            });
+        }
+
+        function submitQuiz() {
+            let correct = 0;
+            let wrong = 0;
+            let wrongAnswers = [];
+
+            selectedQuestions.forEach(q => {
+                const selectedOption = document.querySelector(`input[name="question${q.id}"]:checked`);
+                if (selectedOption) {
+                    if (selectedOption.value === q.correct_answer) {
+                        correct++;
+                    } else {
+                        wrong++;
+                        wrongAnswers.push({ question: q.question, correct: q.options[q.correct_answer] });
+                    }
+                } else {
+                    wrong++;
+                    wrongAnswers.push({ question: q.question, correct: q.options[q.correct_answer] });
+                }
+            });
+
+            document.getElementById('result').innerText = `✅ صحيحة: ${correct} ❌ خاطئة: ${wrong}`;
+            displayWrongAnswers(wrongAnswers);
+        }
+
+        function displayWrongAnswers(wrongAnswers) {
+            const wrongContainer = document.getElementById('wrong-answers');
+            wrongContainer.innerHTML = `<h3>❌ الأسئلة التي أجبت عليها خطأ:</h3>`;
+
+            wrongAnswers.forEach(q => {
+                wrongContainer.innerHTML += `
+                    <p>❌ ${q.question}<br>✅ الإجابة الصحيحة: ${q.correct}</p>
+                `;
             });
         }
 
