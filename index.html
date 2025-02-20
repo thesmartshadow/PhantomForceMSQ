@@ -63,8 +63,8 @@
         </div>
         <h3>فريق Phantom Force - جامعة الحلة، قسم هندسة تقنيات الأمن السيبراني</h3>
         
-        <label>عدد الأسئلة: 
-            <input type="number" id="numQuestions" min="1" max="150" value="10">
+        <label>عدد الأسئلة (1-150): 
+            <input type="number" id="numQuestions" min="1" max="150" value="50">
             <button onclick="loadQuestions()">تحديث الأسئلة</button>
         </label>
 
@@ -78,13 +78,11 @@
         let allQuestions = [];
         let selectedQuestions = [];
 
-        // تحميل الأسئلة من ملف JSON
         async function fetchQuestions() {
             try {
                 const response = await fetch('questions.json'); 
                 const data = await response.json();
                 
-                // التأكد من أن ملف JSON يحتوي على أسئلة صحيحة
                 if (!data.questions || !Array.isArray(data.questions) || data.questions.length === 0) {
                     console.error("⚠️ خطأ: لا توجد أسئلة متاحة في ملف JSON!");
                     alert("⚠️ خطأ: لا توجد أسئلة متاحة، يرجى التحقق من ملف الأسئلة.");
@@ -93,15 +91,13 @@
 
                 allQuestions = data.questions.filter(q => q.question && q.correct_answer && q.options);
                 console.log(`📢 تم تحميل ${allQuestions.length} سؤالًا صالحًا من JSON`);
-
-                loadQuestions(); // تحميل الأسئلة العشوائية عند بدء الصفحة
+                loadQuestions();
             } catch (error) {
                 console.error('⚠️ خطأ في تحميل الأسئلة:', error);
                 alert("⚠️ حدث خطأ أثناء تحميل الأسئلة، تأكد من وجود ملف JSON صحيح.");
             }
         }
 
-        // دالة خلط الأسئلة بطريقة أكثر كفاءة
         function shuffleArray(array) {
             let currentIndex = array.length, randomIndex;
             while (currentIndex > 0) {
@@ -112,12 +108,11 @@
             return array;
         }
 
-        // تحميل عدد معين من الأسئلة بدون تكرار
         function loadQuestions() {
             const num = parseInt(document.getElementById('numQuestions').value);
             
-            if (isNaN(num) || num <= 0 || num > allQuestions.length) {
-                alert(`⚠️ الرجاء إدخال رقم بين 1 و ${allQuestions.length}`);
+            if (isNaN(num) || num <= 0 || num > Math.min(150, allQuestions.length)) {
+                alert(`⚠️ الرجاء إدخال رقم بين 1 و ${Math.min(150, allQuestions.length)}`);
                 return;
             }
 
@@ -126,7 +121,6 @@
             displayQuestions();
         }
 
-        // عرض الأسئلة في الصفحة
         function displayQuestions() {
             const quizContainer = document.getElementById('quiz-container');
             quizContainer.innerHTML = '';
@@ -146,7 +140,7 @@
                     text: q.options[letter]
                 }));
 
-                shuffleArray(options); // خلط ترتيب الخيارات
+                shuffleArray(options);
 
                 options.forEach(option => {
                     questionDiv.innerHTML += `
@@ -160,7 +154,6 @@
             });
         }
 
-        // عند إرسال الاختبار
         function submitQuiz() {
             let correct = 0;
             let wrong = 0;
@@ -185,7 +178,6 @@
             displayWrongAnswers(wrongAnswers);
         }
 
-        // عرض الأسئلة الخاطئة مع الإجابة الصحيحة
         function displayWrongAnswers(wrongAnswers) {
             const wrongContainer = document.getElementById('wrong-answers');
             wrongContainer.innerHTML = `<h3>❌ الأسئلة التي أجبت عليها خطأ:</h3>`;
@@ -197,7 +189,7 @@
             });
         }
 
-        fetchQuestions(); // تحميل الأسئلة عند فتح الصفحة
+        fetchQuestions();
     </script>
 </body>
 </html>
