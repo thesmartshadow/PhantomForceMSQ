@@ -77,16 +77,14 @@
     <script>
         let allQuestions = [];
         let selectedQuestions = [];
-        let currentBatch = 0;
-        const batchSize = 10;
 
         async function fetchQuestions() {
             try {
-                const response = await fetch('questions.json');
+                const response = await fetch('questions.json'); 
                 const data = await response.json();
-                allQuestions = data.questions;
+                allQuestions = data.questions.filter(q => q && q.question && q.correct_answer && q.options);
                 console.log(`📢 تم تحميل ${allQuestions.length} سؤال`);
-                loadQuestions(); 
+                loadQuestions(); // تحميل الأسئلة العشوائية عند بدء الصفحة
             } catch (error) {
                 console.error('⚠️ خطأ في تحميل الأسئلة:', error);
             }
@@ -94,65 +92,55 @@
 
         function loadQuestions() {
             const num = parseInt(document.getElementById('numQuestions').value);
-            if (isNaN(num) || num <= 0 || num > 150) {
-                alert("⚠️ الرجاء إدخال رقم بين 1 و 150");
+            if (isNaN(num) || num <= 0 || num > allQuestions.length) {
+                alert(`⚠️ الرجاء إدخال رقم بين 1 و ${allQuestions.length}`);
                 return;
             }
 
-            selectedQuestions = [];
             let indices = new Set();
-
             while (indices.size < num) {
                 let randomIndex = Math.floor(Math.random() * allQuestions.length);
-                indices.add(randomIndex);
+                if (allQuestions[randomIndex] && allQuestions[randomIndex].question) {
+                    indices.add(randomIndex);
+                }
             }
-            selectedQuestions = Array.from(indices).map(i => allQuestions[i]);
 
-            currentBatch = 0;
-            document.getElementById('quiz-container').innerHTML = "";
-            displayNextBatch();
+            selectedQuestions = Array.from(indices).map(i => allQuestions[i]);
+            displayQuestions();
         }
 
-        function displayNextBatch() {
+        function displayQuestions() {
             const quizContainer = document.getElementById('quiz-container');
+            quizContainer.innerHTML = '';
 
-            let end = Math.min(currentBatch + batchSize, selectedQuestions.length);
-            for (let i = currentBatch; i < end; i++) {
-                const q = selectedQuestions[i];
+            selectedQuestions.forEach((q, index) => {
+                if (!q || !q.question || !q.correct_answer || !q.options) return;
 
                 const questionDiv = document.createElement('div');
                 questionDiv.classList.add('question-box');
-                questionDiv.innerHTML = `<h3>${i + 1}. ${q.question}</h3>`;
+                questionDiv.innerHTML = `<h3>${index + 1}. ${q.question}</h3>`;
 
                 ["A", "B", "C", "D"].forEach(letter => {
                     if (q.options[letter]) {
                         questionDiv.innerHTML += `
                             <label>
-                                <input type="radio" name="question${q.id}" value="${letter}"> ${letter}) ${q.options[letter]}
+                                <input type="radio" name="question${index}" value="${letter}"> ${letter}) ${q.options[letter]}
                             </label><br>
                         `;
                     }
                 });
 
                 quizContainer.appendChild(questionDiv);
-            }
-
-            currentBatch = end;
+            });
         }
-
-        window.addEventListener('scroll', () => {
-            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
-                displayNextBatch();
-            }
-        });
 
         function submitQuiz() {
             let correct = 0;
             let wrong = 0;
             let wrongAnswers = [];
 
-            selectedQuestions.forEach(q => {
-                const selectedOption = document.querySelector(`input[name="question${q.id}"]:checked`);
+            selectedQuestions.forEach((q, index) => {
+                const selectedOption = document.querySelector(`input[name="question${index}"]:checked`);
                 if (selectedOption) {
                     if (selectedOption.value === q.correct_answer) {
                         correct++;
