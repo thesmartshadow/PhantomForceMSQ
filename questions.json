@@ -1,0 +1,115 @@
+{
+    "questions": [
+      {
+        "id": 1,
+        "question": "What is the most effective method for securing data on a lost or stolen laptop?",
+        "options": {
+          "A": "Implementing a Host-based firewall",
+          "B": "Using a Strong administrator password",
+          "C": "Using an Anti-malware software",
+          "D": "Implementing Full disk encryption"
+        },
+        "correct_answer": "D"
+      },
+      {
+        "id": 2,
+        "question": "In which of the given scenarios is it reasonable to anticipate some level of privacy?",
+        "options": {
+          "A": "Sharing a comment on a friend's social media page",
+          "B": "Providing personal details on a school enrollment website",
+          "C": "Commenting on a video-sharing platform",
+          "D": "Sending emails and pictures to a close family member"
+        },
+        "correct_answer": "B"
+      },
+      {
+        "id": 3,
+        "question": "What data type should a developer use to store an alphanumeric postal code in a variable?",
+        "options": {
+          "A": "Integer",
+          "B": "String",
+          "C": "Float",
+          "D": "Boolean"
+        },
+        "correct_answer": "B"
+      },
+      {
+        "id": 4,
+        "question": "Which of the following is most similar to machine language?",
+        "options": {
+          "A": "Scripted language",
+          "B": "Compiled language",
+          "C": "Query language",
+          "D": "Assembly language"
+        },
+        "correct_answer": "D"
+      },
+      {
+        "id": 5,
+        "question": "What is the primary purpose of using a function in programming?",
+        "options": {
+          "A": "To hold a list of numbers.",
+          "B": "To be divided into reusable components.",
+          "C": "To define needed constant values.",
+          "D": "To define variables to hold different values."
+        },
+        "correct_answer": "B"
+      },
+      {
+        "id": 6,
+        "question": "Which option offers the fastest transfer rate when transferring a file across the network?",
+        "options": {
+          "A": "1001 Kbps",
+          "B": "110 Mbps",
+          "C": "1.22 Gbps",
+          "D": "123 Mbps"
+        },
+        "correct_answer": "C"
+      },
+      {
+        "id": 7,
+        "question": "A technician has been tasked with assigning an IP address to a newly acquired desktop computer. Which of the following represents a suitable IP address for the technician to assign?",
+        "options": {
+          "A": "127.0.0.1",
+          "B": "172.16.2.189",
+          "C": "192.168.257.1",
+          "D": "255.255.255.0"
+        },
+        "correct_answer": "B"   
+      },
+      {
+        "id": 8,
+        "question": "What is the most suitable computing device for a game developer who requires a system with robust and upgradeable specifications to accommodate the demands of game engine software?",
+        "options": {
+          "A": "Laptop",
+          "B": "Server",
+          "C": "Game console",
+          "D": "Workstation"
+        },
+        "correct_answer": "D"
+      },
+      {
+        "id": 9,
+        "question": "A company needs multiple reports that analyze interconnected information from sales, inventory, marketing, and compensation data. What is the most suitable location for storing this data?",
+        "options": {
+          "A": "Flat file",
+          "B": "Word processor",
+          "C": "Database",
+          "D": "Network share"
+        },
+        "correct_answer": "C"
+      },
+      {
+        "id": 10,
+        "question": "The computer user is downloading software from the Internet and observes the following at the end of the installation file: 'x86.exe'. Which of the following statements best conveys the meaning of 'x86.exe' in the installation file?",
+        "options": {
+          "A": "x86 only supports an installation on a 32-bit CPU architecture",
+          "B": "x86 supports an installation on a 32-bit and a 64-bit CPU architecture",
+          "C": "x86 only supports an installation on a 64-bit CPU architecture",
+          "D": "x86 supports an installation on a 16-bit CPU architecture"
+        },
+        "correct_answer": "A"
+      }
+    ]
+  }
+  
