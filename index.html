@@ -5,57 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>اختبار تفاعلي</title>
     <style>
-        /* أنماط الهيدر الجديدة */
-        .header-container {
-            background: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin: -20px -20px 20px -20px;
-            padding: 10px 20px;
-        }
-
-        .header {
-            max-width: 800px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: row;
-            direction: ltr;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            max-height: 60px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .logo:hover {
-            transform: rotate(-5deg) scale(1.05);
-        }
-
-        .team-info {
-            text-align: right;
-            border-right: 3px solid #1a73e8;
-            padding-right: 20px;
-            margin-right: 20px;
-        }
-
-        .team-info h1 {
-            margin: 0;
-            color: #1a73e8;
-            font-size: 24px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-        }
-
-        .team-info p {
-            margin: 0;
-            color: #666;
-            font-size: 16px;
-            font-style: italic;
-        }
-
-        /* الأنماط الأصلية */
         body {
             font-family: 'Tajawal', sans-serif;
             background-color: #f0f2f5;
@@ -63,278 +12,92 @@
             direction: rtl;
             text-align: right;
         }
-
         .container {
             max-width: 800px;
             margin: auto;
-        }
-
-        .box {
             background: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-            transition: transform 0.2s ease-in-out;
         }
-
-        .box:hover {
-            transform: scale(1.02);
-        }
-
         h2 {
             color: #1a73e8;
         }
-
-        label {
-            font-weight: bold;
-            color: #1a73e8;
-        }
-
-        input[type="text"], input[type="number"] {
-            width: 100%;
-            padding: 8px;
+        .question-box {
+            margin-bottom: 15px;
+            padding: 10px;
             border: 1px solid #ddd;
-            border-radius: 4px;
-            margin-bottom: 10px;
+            border-radius: 5px;
         }
-
         button {
             background-color: #1a73e8;
             color: white;
             border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
+            padding: 10px 15px;
+            border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
-            margin: 5px;
         }
-
         button:hover {
             background-color: #1557b0;
-        }
-
-        .danger-btn {
-            background-color: #d32f2f;
-        }
-
-        .danger-btn:hover {
-            background-color: #b71c1c;
-        }
-
-        .test-container {
-            display: none;
-        }
-
-        .correct-answer {
-            color: #34a853;
-            font-weight: bold;
-        }
-
-        .result {
-            font-size: 18px;
-            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <!-- الهيدر الجديد -->
-    <div class="header-container">
-        <div class="header">
-            <img src="https://i.imghippo.com/files/A5858t.jpg" class="logo" alt="شعار الفريق">
-            <div class="team-info">
-                <h1>فريق Phantom Force</h1>
-                <p>جامعة الحلة - قسم هندسة تقنيات الامن السيبراني</p>
-            </div>
-        </div>
-    </div>
-
     <div class="container">
-        <!-- إضافة الأسئلة -->
-        <div class="box">
-            <h2>إضافة سؤال جديد</h2>
-            <label for="question">السؤال:</label>
-            <input type="text" id="question" placeholder="أدخل السؤال هنا">
-
-            <label>خيارات الإجابة:</label>
-            <div>
-                <input type="text" id="option1" placeholder="الخيار الأول">
-                <input type="radio" name="correct" value="0">
-            </div>
-            <div>
-                <input type="text" id="option2" placeholder="الخيار الثاني">
-                <input type="radio" name="correct" value="1">
-            </div>
-            <div>
-                <input type="text" id="option3" placeholder="الخيار الثالث">
-                <input type="radio" name="correct" value="2">
-            </div>
-            <div>
-                <input type="text" id="option4" placeholder="الخيار الرابع">
-                <input type="radio" name="correct" value="3">
-            </div>
-
-            <button onclick="addQuestion()">إضافة السؤال</button>
-            <button class="danger-btn" onclick="clearQuestions()">مسح جميع الأسئلة</button>
-        </div>
-
-        <!-- عرض الأسئلة المخزنة -->
-        <div class="box">
-            <h2>الأسئلة المضافة</h2>
-            <div id="questionsContainer"></div>
-        </div>
-
-        <!-- إعداد الاختبار -->
-        <div class="box">
-            <h2>إعداد الاختبار</h2>
-            <label>عدد الأسئلة (الحد الأقصى 150):</label>
-            <input type="number" id="questionCount" min="1" max="150" value="5">
-            <button onclick="startTest()">ابدأ الاختبار</button>
-        </div>
-
-        <!-- تنفيذ الاختبار -->
-        <div class="box test-container" id="testContainer">
-            <h2>الاختبار</h2>
-            <div id="testQuestions"></div>
-            <button onclick="submitTest()">إرسال الإجابات</button>
-            <button class="danger-btn" onclick="resetTest()">إعادة الاختبار</button>
-            <h3 id="testResult" class="result"></h3>
-        </div>
+        <h2>اختبار تفاعلي</h2>
+        <div id="quiz-container">جارٍ تحميل الأسئلة...</div>
+        <button onclick="submitQuiz()">إرسال الإجابات</button>
+        <h3 id="result"></h3>
     </div>
 
     <script>
-        // Firebase Setup
-        import { initializeApp } from "firebase/app";
-        import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc, updateDoc } from "firebase/firestore"; 
+        let questions = [];
 
-        const firebaseConfig = {
-            apiKey: "AIzaSyD4tkNeb8NHfs-pNlRESEyOtVe2jBxVZ6s",
-            authDomain: "phantomforcemsq.firebaseapp.com",
-            projectId: "phantomforcemsq",
-            storageBucket: "phantomforcemsq.firebasestorage.app",
-            messagingSenderId: "69561968302",
-            appId: "1:69561968302:web:84103708b67a1195feaf3f",
-            measurementId: "G-DG4J3RJWHX"
-        };
-
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
-
-        // دالة لإضافة سؤال جديد إلى Firestore
-        async function addQuestion() {
-            const questionText = document.getElementById('question').value;
-            const options = [
-                document.getElementById('option1').value,
-                document.getElementById('option2').value,
-                document.getElementById('option3').value,
-                document.getElementById('option4').value
-            ];
-            const correctAnswer = document.querySelector('input[name="correct"]:checked')?.value;
-
-            if (!questionText || options.some(option => !option) || correctAnswer === undefined) {
-                alert('الرجاء تعبئة جميع الحقول وتحديد الإجابة الصحيحة');
-                return;
-            }
-
+        async function loadQuestions() {
             try {
-                await addDoc(collection(db, "questions"), {
-                    question: questionText,
-                    options: options,
-                    correct: parseInt(correctAnswer)
-                });
-                alert("تم إضافة السؤال بنجاح!");
-                displayQuestions();  // تحديث عرض الأسئلة
-            } catch (e) {
-                console.error("خطأ في إضافة السؤال: ", e);
+                const response = await fetch('questions.json'); // يجب أن يكون على نفس المسار
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                const data = await response.json();
+                questions = data.questions;
+                displayQuestions();
+            } catch (error) {
+                console.error('خطأ في تحميل الأسئلة:', error);
+                document.getElementById('quiz-container').innerText = "حدث خطأ في تحميل الأسئلة.";
             }
         }
 
-        // دالة لعرض الأسئلة من Firestore
-        async function displayQuestions() {
-            const querySnapshot = await getDocs(collection(db, "questions"));
-            const container = document.getElementById('questionsContainer');
-            container.innerHTML = '';
-
-            querySnapshot.forEach((doc, index) => {
-                const q = doc.data();
+        function displayQuestions() {
+            const quizContainer = document.getElementById('quiz-container');
+            quizContainer.innerHTML = '';
+            questions.forEach((q, index) => {
                 const questionDiv = document.createElement('div');
-                questionDiv.innerHTML = `
-                    <h3>السؤال ${index + 1}: ${q.question}</h3>
-                    <div>${q.options.map((option, i) => `<div>${i === q.correct ? `<span class="correct-answer">✓</span>` : ''} ${option}</div>`).join('')}</div>
-                    <button onclick="deleteQuestion('${doc.id}')">حذف السؤال</button>
-                    <button onclick="editQuestion('${doc.id}', '${q.question}', ${JSON.stringify(q.options)}, ${q.correct})">تعديل السؤال</button>
-                `;
-                container.appendChild(questionDiv);
-            });
-        }
-
-        // دالة لحذف السؤال من Firestore
-        async function deleteQuestion(id) {
-            try {
-                await deleteDoc(doc(db, "questions", id));
-                alert("تم حذف السؤال!");
-                displayQuestions();  // تحديث عرض الأسئلة
-            } catch (e) {
-                console.error("خطأ في حذف السؤال: ", e);
-            }
-        }
-
-        // دالة لتعديل السؤال
-        function editQuestion(id, question, options, correct) {
-            document.getElementById('question').value = question;
-            document.getElementById('option1').value = options[0];
-            document.getElementById('option2').value = options[1];
-            document.getElementById('option3').value = options[2];
-            document.getElementById('option4').value = options[3];
-            document.querySelector(`input[name="correct"][value="${correct}"]`).checked = true;
-
-            const editButton = document.querySelector('button');
-            editButton.onclick = function () {
-                updateQuestion(id);
-            };
-        }
-
-        // دالة لتحديث السؤال
-        async function updateQuestion(id) {
-            const questionText = document.getElementById('question').value;
-            const options = [
-                document.getElementById('option1').value,
-                document.getElementById('option2').value,
-                document.getElementById('option3').value,
-                document.getElementById('option4').value
-            ];
-            const correctAnswer = document.querySelector('input[name="correct"]:checked')?.value;
-
-            if (!questionText || options.some(option => !option) || correctAnswer === undefined) {
-                alert('الرجاء تعبئة جميع الحقول وتحديد الإجابة الصحيحة');
-                return;
-            }
-
-            try {
-                await updateDoc(doc(db, "questions", id), {
-                    question: questionText,
-                    options: options,
-                    correct: parseInt(correctAnswer)
+                questionDiv.classList.add('question-box');
+                questionDiv.innerHTML = `<h3>${index + 1}. ${q.question}</h3>`;
+                Object.entries(q.options).forEach(([key, option]) => {
+                    questionDiv.innerHTML += `
+                        <label>
+                            <input type="radio" name="question${q.id}" value="${key}"> ${option}
+                        </label><br>
+                    `;
                 });
-                alert("تم تعديل السؤال بنجاح!");
-                displayQuestions();  // تحديث عرض الأسئلة
-            } catch (e) {
-                console.error("خطأ في تعديل السؤال: ", e);
-            }
-        }
-
-        // دالة لمسح جميع الأسئلة من Firestore
-        async function clearQuestions() {
-            const querySnapshot = await getDocs(collection(db, "questions"));
-            querySnapshot.forEach(async (doc) => {
-                await deleteDoc(doc.ref);
+                quizContainer.appendChild(questionDiv);
             });
-            alert("تم مسح جميع الأسئلة!");
-            displayQuestions();  // تحديث عرض الأسئلة
         }
 
-        // عرض الأسئلة عند تحميل الصفحة
-        displayQuestions();
+        function submitQuiz() {
+            let score = 0;
+            questions.forEach(q => {
+                const selectedOption = document.querySelector(`input[name="question${q.id}"]:checked`);
+                if (selectedOption && selectedOption.value === q.correct_answer) {
+                    score++;
+                }
+            });
+            document.getElementById('result').innerText = `نتيجتك: ${score} من ${questions.length}`;
+        }
+
+        loadQuestions();
     </script>
 </body>
 </html>
