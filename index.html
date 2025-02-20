@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اختبار تفاعلي</title>
+    <title>اختبار تفاعلي - Phantom Force</title>
     <style>
         body {
             font-family: 'Tajawal', sans-serif;
@@ -78,69 +78,96 @@
         let allQuestions = [];
         let selectedQuestions = [];
 
+        // تحميل الأسئلة من ملف JSON
         async function fetchQuestions() {
             try {
                 const response = await fetch('questions.json'); 
                 const data = await response.json();
-                allQuestions = data.questions.filter(q => q && q.question && q.correct_answer && q.options);
-                console.log(`📢 تم تحميل ${allQuestions.length} سؤال`);
+                
+                // التأكد من أن ملف JSON يحتوي على أسئلة صحيحة
+                if (!data.questions || !Array.isArray(data.questions) || data.questions.length === 0) {
+                    console.error("⚠️ خطأ: لا توجد أسئلة متاحة في ملف JSON!");
+                    alert("⚠️ خطأ: لا توجد أسئلة متاحة، يرجى التحقق من ملف الأسئلة.");
+                    return;
+                }
+
+                allQuestions = data.questions.filter(q => q.question && q.correct_answer && q.options);
+                console.log(`📢 تم تحميل ${allQuestions.length} سؤالًا صالحًا من JSON`);
+
                 loadQuestions(); // تحميل الأسئلة العشوائية عند بدء الصفحة
             } catch (error) {
                 console.error('⚠️ خطأ في تحميل الأسئلة:', error);
+                alert("⚠️ حدث خطأ أثناء تحميل الأسئلة، تأكد من وجود ملف JSON صحيح.");
             }
         }
 
+        // دالة خلط الأسئلة بطريقة أكثر كفاءة
+        function shuffleArray(array) {
+            let currentIndex = array.length, randomIndex;
+            while (currentIndex > 0) {
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--;
+                [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+            }
+            return array;
+        }
+
+        // تحميل عدد معين من الأسئلة بدون تكرار
         function loadQuestions() {
             const num = parseInt(document.getElementById('numQuestions').value);
+            
             if (isNaN(num) || num <= 0 || num > allQuestions.length) {
                 alert(`⚠️ الرجاء إدخال رقم بين 1 و ${allQuestions.length}`);
                 return;
             }
 
-            let indices = new Set();
-            while (indices.size < num) {
-                let randomIndex = Math.floor(Math.random() * allQuestions.length);
-                if (allQuestions[randomIndex] && allQuestions[randomIndex].question) {
-                    indices.add(randomIndex);
-                }
-            }
-
-            selectedQuestions = Array.from(indices).map(i => allQuestions[i]);
+            selectedQuestions = shuffleArray([...allQuestions]).slice(0, num);
+            console.log(`📢 تم اختيار ${selectedQuestions.length} سؤال عشوائيًا`);
             displayQuestions();
         }
 
+        // عرض الأسئلة في الصفحة
         function displayQuestions() {
             const quizContainer = document.getElementById('quiz-container');
             quizContainer.innerHTML = '';
 
-            selectedQuestions.forEach((q, index) => {
-                if (!q || !q.question || !q.correct_answer || !q.options) return;
+            if (selectedQuestions.length === 0) {
+                quizContainer.innerHTML = '<p>⚠️ لم يتم العثور على أسئلة!</p>';
+                return;
+            }
 
+            selectedQuestions.forEach((q, index) => {
                 const questionDiv = document.createElement('div');
                 questionDiv.classList.add('question-box');
                 questionDiv.innerHTML = `<h3>${index + 1}. ${q.question}</h3>`;
 
-                ["A", "B", "C", "D"].forEach(letter => {
-                    if (q.options[letter]) {
-                        questionDiv.innerHTML += `
-                            <label>
-                                <input type="radio" name="question${index}" value="${letter}"> ${letter}) ${q.options[letter]}
-                            </label><br>
-                        `;
-                    }
+                let options = Object.keys(q.options).map(letter => ({
+                    letter: letter,
+                    text: q.options[letter]
+                }));
+
+                shuffleArray(options); // خلط ترتيب الخيارات
+
+                options.forEach(option => {
+                    questionDiv.innerHTML += `
+                        <label>
+                            <input type="radio" name="question${q.id}" value="${option.letter}"> ${option.letter}) ${option.text}
+                        </label><br>
+                    `;
                 });
 
                 quizContainer.appendChild(questionDiv);
             });
         }
 
+        // عند إرسال الاختبار
         function submitQuiz() {
             let correct = 0;
             let wrong = 0;
             let wrongAnswers = [];
 
-            selectedQuestions.forEach((q, index) => {
-                const selectedOption = document.querySelector(`input[name="question${index}"]:checked`);
+            selectedQuestions.forEach(q => {
+                const selectedOption = document.querySelector(`input[name="question${q.id}"]:checked`);
                 if (selectedOption) {
                     if (selectedOption.value === q.correct_answer) {
                         correct++;
@@ -158,6 +185,7 @@
             displayWrongAnswers(wrongAnswers);
         }
 
+        // عرض الأسئلة الخاطئة مع الإجابة الصحيحة
         function displayWrongAnswers(wrongAnswers) {
             const wrongContainer = document.getElementById('wrong-answers');
             wrongContainer.innerHTML = `<h3>❌ الأسئلة التي أجبت عليها خطأ:</h3>`;
@@ -169,7 +197,7 @@
             });
         }
 
-        fetchQuestions();
+        fetchQuestions(); // تحميل الأسئلة عند فتح الصفحة
     </script>
 </body>
 </html>
