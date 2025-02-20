@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اختبار MSQ - Phantom Force</title>
+    <title>اختبار تفاعلي</title>
     <style>
         body {
             font-family: 'Tajawal', sans-serif;
@@ -13,7 +13,7 @@
             text-align: right;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
             background: white;
             padding: 20px;
@@ -21,22 +21,20 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .header {
-            text-align: center;
-            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ddd;
         }
-        .header img {
-            width: 100px;
-            height: auto;
-        }
-        h2 {
-            color: #1a73e8;
+        .logo {
+            width: 70px;
         }
         .question-box {
             margin-bottom: 15px;
             padding: 10px;
             border: 1px solid #ddd;
             border-radius: 5px;
-            background-color: #f9f9f9;
         }
         button {
             background-color: #1a73e8;
@@ -50,98 +48,137 @@
         button:hover {
             background-color: #1557b0;
         }
-        .incorrect-answers {
-            background: #ffebee;
-            padding: 10px;
-            border-radius: 5px;
-            margin-top: 20px;
+        input[type="number"] {
+            width: 50px;
+            padding: 5px;
+            margin-right: 10px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <img src="https://i.imghippo.com/files/A5858t.jpg" alt="Phantom Force Logo">
-            <h2>فريق Phantom Force - جامعة الحلة</h2>
-            <h4>قسم هندسة تقنيات الأمن السيبراني</h4>
+            <h2>اختبار تفاعلي</h2>
+            <img src="https://i.imghippo.com/files/A5858t.jpg" alt="Phantom Force Logo" class="logo">
         </div>
+        <h3>فريق Phantom Force - جامعة الحلة، قسم هندسة تقنيات الأمن السيبراني</h3>
+        
+        <label>عدد الأسئلة: 
+            <input type="number" id="numQuestions" min="1" max="150" value="10">
+            <button onclick="loadQuestions()">تحديث الأسئلة</button>
+        </label>
 
-        <h2>اختبار تفاعلي</h2>
-        <label for="num-questions">عدد الأسئلة:</label>
-        <input type="number" id="num-questions" min="1" max="10" value="5">
-        <button onclick="loadQuestions()">تحديث الأسئلة</button>
         <div id="quiz-container"></div>
         <button onclick="submitQuiz()">إرسال الإجابات</button>
         <h3 id="result"></h3>
-        <div id="incorrect-answers" class="incorrect-answers" style="display:none;"></div>
+        <div id="wrong-answers"></div>
     </div>
 
     <script>
         let allQuestions = [];
-        let questions = [];
+        let selectedQuestions = [];
+        let currentBatch = 0;
+        const batchSize = 10;
+
         async function fetchQuestions() {
             try {
                 const response = await fetch('questions.json');
                 const data = await response.json();
                 allQuestions = data.questions;
-                loadQuestions();
+                console.log(`📢 تم تحميل ${allQuestions.length} سؤال`);
+                loadQuestions(); 
             } catch (error) {
-                console.error('خطأ في تحميل الأسئلة:', error);
+                console.error('⚠️ خطأ في تحميل الأسئلة:', error);
             }
         }
 
         function loadQuestions() {
-            const numQuestions = parseInt(document.getElementById('num-questions').value) || 5;
-            questions = allQuestions.sort(() => 0.5 - Math.random()).slice(0, numQuestions);
-            displayQuestions();
+            const num = parseInt(document.getElementById('numQuestions').value);
+            if (isNaN(num) || num <= 0 || num > 150) {
+                alert("⚠️ الرجاء إدخال رقم بين 1 و 150");
+                return;
+            }
+
+            selectedQuestions = [];
+            let indices = new Set();
+
+            while (indices.size < num) {
+                let randomIndex = Math.floor(Math.random() * allQuestions.length);
+                indices.add(randomIndex);
+            }
+            selectedQuestions = Array.from(indices).map(i => allQuestions[i]);
+
+            currentBatch = 0;
+            document.getElementById('quiz-container').innerHTML = "";
+            displayNextBatch();
         }
 
-        function displayQuestions() {
+        function displayNextBatch() {
             const quizContainer = document.getElementById('quiz-container');
-            quizContainer.innerHTML = '';
-            questions.forEach((q, index) => {
+
+            let end = Math.min(currentBatch + batchSize, selectedQuestions.length);
+            for (let i = currentBatch; i < end; i++) {
+                const q = selectedQuestions[i];
+
                 const questionDiv = document.createElement('div');
                 questionDiv.classList.add('question-box');
-                questionDiv.innerHTML = `<h3>${index + 1}. ${q.question}</h3>`;
-                ['A', 'B', 'C', 'D'].forEach(key => {
-                    questionDiv.innerHTML += `
-                        <label>
-                            <input type="radio" name="question${q.id}" value="${key}"> ${key}. ${q.options[key]}
-                        </label><br>
-                    `;
+                questionDiv.innerHTML = `<h3>${i + 1}. ${q.question}</h3>`;
+
+                ["A", "B", "C", "D"].forEach(letter => {
+                    if (q.options[letter]) {
+                        questionDiv.innerHTML += `
+                            <label>
+                                <input type="radio" name="question${q.id}" value="${letter}"> ${letter}) ${q.options[letter]}
+                            </label><br>
+                        `;
+                    }
                 });
+
                 quizContainer.appendChild(questionDiv);
-            });
+            }
+
+            currentBatch = end;
         }
 
+        window.addEventListener('scroll', () => {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+                displayNextBatch();
+            }
+        });
+
         function submitQuiz() {
-            let correctCount = 0;
-            let incorrectCount = 0;
-            let incorrectAnswers = [];
-            
-            questions.forEach(q => {
+            let correct = 0;
+            let wrong = 0;
+            let wrongAnswers = [];
+
+            selectedQuestions.forEach(q => {
                 const selectedOption = document.querySelector(`input[name="question${q.id}"]:checked`);
                 if (selectedOption) {
                     if (selectedOption.value === q.correct_answer) {
-                        correctCount++;
+                        correct++;
                     } else {
-                        incorrectCount++;
-                        incorrectAnswers.push(`<p><strong>${q.question}</strong><br>إجابتك: ${q.options[selectedOption.value]}<br>الإجابة الصحيحة: ${q.options[q.correct_answer]}</p>`);
+                        wrong++;
+                        wrongAnswers.push({ question: q.question, correct: q.correct_answer });
                     }
                 } else {
-                    incorrectCount++;
-                    incorrectAnswers.push(`<p><strong>${q.question}</strong><br>لم تختر إجابة<br>الإجابة الصحيحة: ${q.options[q.correct_answer]}</p>`);
+                    wrong++;
+                    wrongAnswers.push({ question: q.question, correct: q.correct_answer });
                 }
             });
-            
-            document.getElementById('result').innerText = `✅ صحيح: ${correctCount} ❌ خطأ: ${incorrectCount}`;
-            const incorrectDiv = document.getElementById('incorrect-answers');
-            if (incorrectAnswers.length > 0) {
-                incorrectDiv.style.display = 'block';
-                incorrectDiv.innerHTML = `<h3>الأسئلة التي أجبت عليها خطأ:</h3>` + incorrectAnswers.join('');
-            } else {
-                incorrectDiv.style.display = 'none';
-            }
+
+            document.getElementById('result').innerText = `✅ صحيحة: ${correct} ❌ خاطئة: ${wrong}`;
+            displayWrongAnswers(wrongAnswers);
+        }
+
+        function displayWrongAnswers(wrongAnswers) {
+            const wrongContainer = document.getElementById('wrong-answers');
+            wrongContainer.innerHTML = `<h3>❌ الأسئلة التي أجبت عليها خطأ:</h3>`;
+
+            wrongAnswers.forEach(q => {
+                wrongContainer.innerHTML += `
+                    <p>❌ ${q.question}<br>✅ الإجابة الصحيحة: ${q.correct}</p>
+                `;
+            });
         }
 
         fetchQuestions();
