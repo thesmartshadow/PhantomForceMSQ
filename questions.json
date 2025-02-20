@@ -75,7 +75,7 @@
           "C": "192.168.257.1",
           "D": "255.255.255.0"
         },
-        "correct_answer": "B"   
+        "correct_answer": "B"
       },
       {
         "id": 8,
@@ -110,8 +110,8 @@
         },
         "correct_answer": "A"
       },
-      {
-        "questions": [
+      
+       
           {
             "id": 11,
             "question": "Which of the following is employed for transmitting messages through the SMTP protocol?",
@@ -221,1506 +221,1447 @@
               "D": "Processing"
             },
             "correct_answer": "C"
+          },
+          {
+            "id": 21,
+            "question": "Which of the following enables communication between wireless devices and a wired network?",
+            "options": {
+              "A": "Modem",
+              "B": "Switch",
+              "C": "Firewall",
+              "D": "Access point"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "id": 22,
+            "question": "Which of the following computing devices is utilized to distribute services to a group of clients centrally and typically plays a role on a Local Area Network (LAN)?",
+            "options": {
+              "A": "Laptop",
+              "B": "Workstation",
+              "C": "Mobile phone",
+              "D": "Server"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "id": 23,
+            "question": "Which term among the following refers to a database element that corresponds to the unique identifier in the parent table?",
+            "options": {
+              "A": "Attribute",
+              "B": "Constraint",
+              "C": "Foreign key",
+              "D": "Primary Key"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 24,
+            "question": "For which purpose is a relational database management system most frequently employed among the following?",
+            "options": {
+              "A": "Building flowcharts",
+              "B": "Storing information",
+              "C": "Generating reports",
+              "D": "Creating diagrams"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 25,
+            "question": "Which of the following descriptions best characterizes an application operating within a typical operating system?",
+            "options": {
+              "A": "Process",
+              "B": "Thread",
+              "C": "Function",
+              "D": "Task"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 26,
+            "question": "What is the most critical factor to consider before allowing remote access to a server reachable from both the company network and the Internet?",
+            "options": {
+              "A": "The type of computer used for the connection",
+              "B": "The security measure employed to allow connections",
+              "C": "The internet speeds provided by employees' home ISPs",
+              "D": "The geographical locations of the employees"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 27,
+            "question": "What function of an operating system is performed by the 'shell'?",
+            "options": {
+              "A": "Memory management",
+              "B": "File management",
+              "C": "User interface",
+              "D": "Device management"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 28,
+            "question": "After confirming a hypothesis's validity during issue diagnosis, what course of action should the technician take next?",
+            "options": {
+              "A": "Execute the solution",
+              "B": "Record acquired knowledge",
+              "C": "Formulate an action plan",
+              "D": "Validate the complete functionality of the system"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 29,
+            "question": "Joe, a user, discovers that his password for a social media site has been compromised. When he informs a friend that his email and banking accounts are also compromised, what is the most likely action Joe has taken?",
+            "options": {
+              "A": "Reusing passwords",
+              "B": "Snooping",
+              "C": "Social engineering",
+              "D": "Phishing"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 30,
+            "question": "What is the primary element Joe, a developer, would likely utilize to store a variable number that alters the execution of his program?",
+            "options": {
+              "A": "Loop",
+              "B": "Variable",
+              "C": "Constant",
+              "D": "Function"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 31,
+            "question": "For creating a website, which language type would a web developer be most inclined to use?",
+            "options": {
+              "A": "Interpreted",
+              "B": "Query",
+              "C": "Compiled",
+              "D": "Assembly"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 32,
+            "question": "A user encounters an error message while attempting to access a website. To gather more information about the issue, a technician poses questions to the user and then accesses the same site using a local browser. In this scenario, which of the following troubleshooting steps is the technician employing by visiting the same site?",
+            "options": {
+              "A": "Establish a plan of action",
+              "B": "Gather information",
+              "C": "Duplicate the problem",
+              "D": "Find the root cause"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 33,
+            "question": "Which of the subsequent software license models permits a developer to alter the original code and distribute their version of the application?",
+            "options": {
+              "A": "Proprietary software",
+              "B": "Commercial software",
+              "C": "Open-source software",
+              "D": "Cross-platform software"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 34,
+            "question": "The company president has sought help in selecting a suitable Internet connection for her residence, which is situated in a remote area without access to existing infrastructure. Which of the following types of Internet services would be the most suitable in this scenario?",
+            "options": {
+              "A": "Fiber",
+              "B": "DSL",
+              "C": "Cable",
+              "D": "Satellite"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "id": 35,
+            "question": "An administrator authorizes a user to retrieve data from a database. Which of the following actions has been executed?",
+            "options": {
+              "A": "Data correlation",
+              "B": "Data manipulation",
+              "C": "Data Control",
+              "D": "Data definition"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 36,
+            "question": "What concept is demonstrated when a company, during a disaster recovery drill, chooses to recover customer data before operational data?",
+            "options": {
+              "A": "Redundancy",
+              "B": "Replication",
+              "C": "Prioritization",
+              "D": "Fault tolerance"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 37,
+            "question": "A technician is tasked with installing a wireless router for a client that is capable of speeds up to 11 Mbps and functions on the 2.4GHz band. In this scenario, which of the following options should the technician choose?",
+            "options": {
+              "A": "802.11a",
+              "B": "802.11b",
+              "D": "802.11n"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 38,
+            "question": "The IT department has implemented a new password policy for employees, stipulating the following:\n● Passwords should not include common dictionary words\n● Passwords must incorporate at least one special character\n● Passwords must differ from the previous six passwords used\n● Passwords must include at least one capital letter or number\nWhich two of the following practices are being utilized?",
+            "options": {
+              "A": "Password lockout",
+              "B": "Password complexity",
+              "C": "Password expiration",
+              "D": "Password history",
+              "E": "Password length",
+              "F": "Password age"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 39,
+            "question": "A technician is setting up a new wireless network and aims to safeguard it against unauthorized access. In terms of security, which of the following protocols would be the most secure?",
+            "options": {
+              "A": "WPA",
+              "B": "SSID",
+              "C": "WEP",
+              "D": "WPA2"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "id": 40,
+            "question": "Which of the following would be most effectively managed as a flat file rather than being stored in a database?",
+            "options": {
+              "A": "Contact list",
+              "B": "Movie theater locations",
+              "C": "Directions to doctor’s office",
+              "D": "Store inventory"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 41,
+            "question": "Which of the following elements in a relational database is employed to guarantee that appropriate values are inputted for a column?",
+            "options": {
+              "A": "Schema",
+              "B": "Permissions",
+              "C": "Constraint",
+              "D": "Index"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 42,
+            "question": "An end user's computer has been experiencing difficulties in opening its word processing software, and an IT technician has effectively resolved the issue. What would be the technician's most appropriate subsequent action?",
+            "options": {
+              "A": "Reboot the computer",
+              "B": "Reach out to other users",
+              "C": "Unplug the peripherals",
+              "D": "Record the findings"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "id": 43,
+            "question": "What type of file in an operating system is the main means of providing coordination of hardware components?",
+            "options": {
+              "A": "Executable file",
+              "B": "Configuration file",
+              "C": "Device file",
+              "D": "Library file"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 44,
+            "question": "A technician is summoned to replace a display for a workstation. What is the most probable connection type that would be utilized to link the display to the workstation?",
+            "options": {
+              "A": "USB",
+              "B": "NFC",
+              "C": "DSL",
+              "D": "DVI"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "id": 45,
+            "question": "What is an example of an open source operating system?",
+            "options": {
+              "A": "Windows",
+              "B": "macOS",
+              "C": "Linux",
+              "D": "iOS"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 46,
+            "question": "Which of the following intellectual property concepts MOST aptly signifies a legally safeguarded slogan for a business?",
+            "options": {
+              "A": "Contract",
+              "B": "Patent",
+              "C": "Copyright",
+              "D": "Trademark"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "id": 47,
+            "question": "A desktop administrator has recently linked a printer to a workstation, but the workstation is not detecting the printer. What is the MOST probable requirement for the printer to operate on the workstation?",
+            "options": {
+              "A": "Permission",
+              "B": "Power source",
+              "C": "USB cable",
+              "D": "Driver"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "id": 48,
+            "question": "An employee is tasked with creating a report on a student information system. To accomplish this, the employee utilizes spreadsheet software and connects to a remote database to retrieve data for the report. What type of application architecture did the employee employ?",
+            "options": {
+              "A": "Standalone application",
+              "B": "Client-server application",
+              "C": "Web application",
+              "D": "Cloud application"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 49,
+            "question": "A user is encountering issues with her IP-based security camera at home following a rainstorm that resulted in a power outage. The camera's LED light indicates that it has power. What is the MOST probable problem?",
+            "options": {
+              "A": "The power outage caused a malfunction in the camera",
+              "B": "Ann is facing a compatibility issue with the camera",
+              "C": "The camera requires a firmware update",
+              "D": "Ann's Internet connection and wireless router are still unavailable"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "id": 50,
+            "question": "A regulation mandates that new applicants submit a retina scan to address potential legal queries about the applicant's identity. Which of the following concepts does this exemplify?",
+            "options": {
+              "A": "Non-repudiation",
+              "B": "Authentication",
+              "C": "Integrity",
+              "D": "Accounting"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 51,
+            "question": "What is the benefit of deploying an application to the cloud?",
+            "options": {
+              "A": "Local storage of data is not necessary",
+              "B": "Elimination of support requirements",
+              "C": "Elimination of service needs",
+              "D": "No necessity for internet access"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 52,
+            "question": "A program must select between apples, oranges, or bananas depending on an input. Which of the following programming structures is MOST suitable to use?",
+            "options": {
+              "A": "Variable",
+              "B": "If Statement",
+              "C": "Datatype",
+              "D": "Comment"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 53,
+            "question": "A UPS offers safeguards against:",
+            "options": {
+              "A": "Denial of service attack",
+              "B": "Replay attack",
+              "C": "Power outages",
+              "D": "Wiretapping"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 54,
+            "question": "To watch company training videos from a DVD, which of the following components would fulfill this task?",
+            "options": {
+              "A": "Optical drive",
+              "B": "Hard Disk Drive",
+              "C": "Solid-State Drive",
+              "D": "Flash drive"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 55,
+            "question": "In transferring a file over the network, which of the following would represent the HIGHEST transfer rate?",
+            "options": {
+              "A": "1001 Kbps",
+              "B": "110 Mbps",
+              "C": "1.22 Gbps",
+              "D": "123 Mbps"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 56,
+            "question": "What term is used to describe terminating a process that is not responding to user input?",
+            "options": {
+              "A": "Hibernation",
+              "B": "Synchronization",
+              "C": "Interruption",
+              "D": "Force Quit"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "id": 57,
+            "question": "Which of the following is a unique identifier for a database record?",
+            "options": {
+              "A": "Foreign key",
+              "B": "Public key",
+              "C": "Primary key",
+              "D": "Private key"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 58,
+            "question": "A systems administrator intends to retrieve results for a specific time range within a database. Which of the following commands should the administrator use?",
+            "options": {
+              "A": "SELECT",
+              "B": "INSERT",
+              "C": "DELETE",
+              "D": "UPDATE"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 59,
+            "question": "Which of the following denotes a wireless communication method that necessitates devices to be within 4 cm(1.57 inches) proximity for information transfer?",
+            "options": {
+              "A": "Infrared",
+              "B": "NFC",
+              "C": "Bluetooth",
+              "D": "WiFi"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 60,
+            "question": "Which of the following most accurately characterizes a KiloByte?",
+            "options": {
+              "A": "A kilobyte is a unit of storage measurement",
+              "B": "A kilobyte is a unit of throughput measurement",
+              "C": "A kilobyte is a unit of power measurement",
+              "D": "A kilobyte is a unit of processor speed measurement"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 61,
+            "question": "The wireless access point installed recently has a weaker broadcast signal than anticipated. Which of the following measures would be most effective in enhancing the signal strength?",
+            "options": {
+              "A": "Upgrade from 802.11b to 802.11g",
+              "B": "Eliminate sources of electromagnetic interference (EMI)",
+              "C": "Activate WPA2-Enterprise",
+              "D": "Utilize WiFi Protected Setup"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 62,
+            "question": "Which of the following security issues poses a risk to confidentiality?",
+            "options": {
+              "A": "Replay attack",
+              "B": "Denial-of-Service attack",
+              "C": "Service outage",
+              "D": "Dumpster diving"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 63,
+            "question": "A startup company has designed a logo and aims to prevent any other entity from using it for any purpose. Which two of the following measures should the company employ for the BEST protection?",
+            "options": {
+              "A": "Patent",
+              "B": "Copyright",
+              "C": "Non-Disclosure Agreement (NDA)",
+              "D": "Trademark",
+              "E": "EULA (End User License Agreement)"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 64,
+            "question": "What is the MOST probable choice for representing international text data?",
+            "options": {
+              "A": "ASCII",
+              "B": "Octal",
+              "C": "Hexadecimal",
+              "D": "Unicode"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "id": 65,
+            "question": "What is the last step in the standard troubleshooting methodology?",
+            "options": {
+              "A": "Document the solution and cause",
+              "B": "Formulate a new theory of cause",
+              "C": "Conduct online research on the problem",
+              "D": "Implement preventive measures"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 66,
+            "question": "What is the program employed by a systems administrator to directly interact with hardware, managing storage, network, and virtual machines, an instance of?",
+            "options": {
+              "A": "A storage area network",
+              "B": "An embedded OS",
+              "C": "Network-attached storage",
+              "D": "A Type 1 hypervisor"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "id": 67,
+            "question": "Which two of the following Operating Systems can execute a program without requiring file extensions?",
+            "options": {
+              "A": "Windows 7",
+              "B": "Windows 8",
+              "C": "UNIX",
+              "D": "Windows Server 2012",
+              "E": "Android",
+              "F": "Linux"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 68,
+            "question": "What should a user configure on a laptop to ensure that substantial personal and confidential data remains inaccessible if the laptop is stolen?",
+            "options": {
+              "A": "Encryption",
+              "B": "Compression",
+              "C": "Permissions",
+              "D": "Auditing"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 69,
+            "question": "Which of the following languages is compiled?",
+            "options": {
+              "A": "Perl",
+              "B": "JavaScript",
+              "C": "Java",
+              "D": "PowerShell"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 70,
+            "question": "A user encounters an error when trying to print a document to a wireless printer, with a message stating the operation could not be completed. What action should the user take to address this issue?",
+            "options": {
+              "A": "Confirm that both devices are connected to the LAN",
+              "B": "Enable task scheduling",
+              "C": "Reset the proxy settings to their default values",
+              "D": "Review the fault tolerance configurations"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 71,
+            "question": "What are the fundamental computing operations?",
+            "options": {
+              "A": "Input, process, output, and feedback",
+              "B": "Input, output, storage, and feedback",
+              "C": "Input, process, and output",
+              "D": "Input, process, output, and storage"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "id": 72,
+            "question": "Which of the following is MOST likely to prevent malware sent as a compromised file via email from infecting a person’s computer?",
+            "options": {
+              "A": "Email previewing",
+              "B": "Patching",
+              "C": "Clearing browsing cache",
+              "D": "Killing processes"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 73,
+            "question": "A programmer needs to store output in a location that can be accessed as quickly as possible, and the data doesn't need to be persistent. Which of the following is the BEST option for storing the data?",
+            "options": {
+              "A": "Flat file",
+              "B": "Memory",
+              "C": "Relational database",
+              "D": "Solid-State Drive"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 74,
+            "question": "Which of the following statements MOST accurately characterizes binary?",
+            "options": {
+              "A": "A notational system is employed to signify an 'on' or 'off' state",
+              "B": "A notational system is utilized to indicate media access control",
+              "C": "A notational system is employed to represent Internet protocol addressing",
+              "D": "A notational system is utilized to represent a storage unit of measurement"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 75,
+            "question": "The Task Scheduler allows you to run a process automatically in Windows. What is a widely used Linux equivalent?",
+            "options": {
+              "A": "Kernel Dispatcher",
+              "B": "System Monitor",
+              "C": "Cron",
+              "D": "Daemon Manager"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 76,
+            "question": "Which of the following exemplifies Authentication?",
+            "options": {
+              "A": "Password and passphrase",
+              "B": "Fingerprint and retina scan",
+              "C": "Hardware tokens and smartphone",
+              "D": "Smart card and PIN"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 77,
+            "question": "A developer is formulating precise, sequential instructions and conditional statements for a computer program to solve problems. What is the developer creating?",
+            "options": {
+              "A": "Algorithm",
+              "B": "Software",
+              "C": "Pseudocode",
+              "D": "Flowchart"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 78,
+            "question": "When sending and receiving Internet email, which of the following network protocols are MOST likely to be used? (Select TWO.)",
+            "options": {
+              "A": "SMTP",
+              "B": "POP3",
+              "C": "SNMP",
+              "D": "DHCP",
+              "E": "ICMP",
+              "F": "SFTP"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 79,
+            "question": "A user has completed the initial setup wizard for the Operating System. What would be the most critical next step for the user to take?",
+            "options": {
+              "A": "Confirm Internet connectivity",
+              "B": "Install productivity software",
+              "C": "Install security software",
+              "D": "Add additional user accounts"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 80,
+            "question": "Which of the following technologies enables a user to operate multiple Operating Systems simultaneously on a single computer?",
+            "options": {
+              "A": "Telepresence",
+              "B": "Cloud-based software",
+              "C": "Virtualization software",
+              "D": "Productivity software"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 81,
+            "question": "A user wishes to update a driver to access additional features. Where should the user find the most recent version of the driver from an official source?",
+            "options": {
+              "A": "Manufacturer’s CD/DVD that accompanied the computer",
+              "B": "Manufacturer’s official website",
+              "C": "Internet community support forums",
+              "D": "Third-party support websites"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 82,
+            "question": "What action should be taken to minimize physical safety risks surrounding a recently installed computer?",
+            "options": {
+              "A": "Ensure all connections are properly seated",
+              "B": "Refrain from positioning other computers nearby",
+              "C": "Secure loose cables using zip ties or Velcro straps",
+              "D": "Connect all peripherals to the computer"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 83,
+            "question": "A user with an outdated operating system frequently accesses sensitive websites like banking, email, and corporate intranets using a web browser that has lost patch support and is no longer updated. What action will address this situation?",
+            "options": {
+              "A": "Remove all unused browser extensions and toolbars to minimize risks.",
+              "B": "Upgrade the user's account to an admin-level account for enhanced overall security.",
+              "C": "Switch to an alternative browser that receives regular security updates.",
+              "D": "Install several anti-malware and firewall products to enhance the computing experience."
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 84,
+            "question": "Which of the following connectors is MOST frequently employed to link a computer to a network?",
+            "options": {
+              "A": "RJ-45",
+              "B": "RJ-11",
+              "C": "IDE",
+              "D": "eSATA"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 85,
+            "question": "A user is setting up a new scanner on a computer. What is MOST likely to be installed to enable this device to function?",
+            "options": {
+              "A": "License key",
+              "B": "OS update",
+              "C": "Firmware",
+              "D": "Driver"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "id": 86,
+            "question": "Which of the following types of software is employed to decrease the size of a file or folder?",
+            "options": {
+              "A": "Desktop publishing",
+              "B": "Basic database",
+              "C": "Compression",
+              "D": "Anti-malware"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 87,
+            "question": "Which of the following is employed alongside a touch screen to enhance accuracy?",
+            "options": {
+              "A": "Touchpad",
+              "B": "Stylus pen",
+              "C": "Joystick",
+              "D": "Trackball"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 88,
+            "question": "Which of the following internal components is utilized for temporary data storage in a workstation?",
+            "options": {
+              "A": "Power supply",
+              "B": "CPU",
+              "C": "RAM",
+              "D": "Hard drive"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 89,
+            "question": "Which of the following is employed for the temporary storage of program data that is erased when the computer is turned off?",
+            "options": {
+              "A": "CPU",
+              "B": "SSD",
+              "C": "Hard drive",
+              "D": "System memory"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "id": 90,
+            "question": "Which of the following is utilized for persistent data storage over the long term?",
+            "options": {
+              "A": "SSD",
+              "B": "ESD",
+              "C": "PSU",
+              "D": "RAM"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 91,
+            "question": "Which two of the following are advisable measures to take when generating a password?",
+            "options": {
+              "A": "Utilize personal identifiable information",
+              "B": "Employ the same password across multiple systems",
+              "C": "Use a phrase that is easy to recall",
+              "D": "Utilize mixed case letters",
+              "E": "Include special characters"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "id": 92,
+            "question": "Which of the following necessitates user interaction to propagate?",
+            "options": {
+              "A": "Worm",
+              "B": "Adware",
+              "C": "Ransomware",
+              "D": "Virus"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "id": 93,
+            "question": "Ann, a user with a new laptop, is experiencing difficulty printing with her old printer. She confirmed that the printer has connectivity to the laptop. What should Ann examine next?",
+            "options": {
+              "A": "Printer manufacturer’s website",
+              "B": "BIOS settings",
+              "C": "Laptop vendor’s website",
+              "D": "Power cord"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 94,
+            "question": "Which three of the following devices might be necessary for video conferencing?",
+            "options": {
+              "A": "Speakers",
+              "B": "Touch screen",
+              "C": "Microphone",
+              "D": "Webcam",
+              "E": "DVD drive",
+              "F": "Projector"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 95,
+            "question": "Which two of the following are the most rapid methods to transmit a copy of a physical document to a remote user?",
+            "options": {
+              "A": "Scan and email a copy of the document",
+              "B": "Utilize document transcription software",
+              "C": "Retype the document on the user’s computer",
+              "D": "Fax a copy of the document to the user",
+              "E": "Copy and mail the document to the user"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 96,
+            "question": "Ann and Joe, both users, utilize the same computer and log in with the same account. Ann is worried that Joe might check her Internet activity. What can be put in place to prevent both users from examining each other’s Internet activity?",
+            "options": {
+              "A": "Encrypt the computer’s hard drive",
+              "B": "Each user should use a different browser type",
+              "C": "Use a password to protect the shared account",
+              "D": "Configure the browser to clear history upon exit"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "id": 97,
+            "question": "What is the main function of a computer’s case fan?",
+            "options": {
+              "A": "To dissipate heat from internal components",
+              "B": "To cool the CPU",
+              "C": "To cool the video card",
+              "D": "To improve airflow through the case"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 98,
+            "question": "A technician needs to connect a user’s computer to the network. Which of the following device types would the technician install?",
+            "options": {
+              "A": "Modem",
+              "B": "Ethernet card",
+              "C": "Graphics card",
+              "D": "Daughterboard"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 99,
+            "question": "A user intends to securely back up data for recovery in case of a natural disaster. Which two of the following is the BEST solution?",
+            "options": {
+              "A": "Back up to a NAS on-site",
+              "B": "Back up to tape and send off-site",
+              "C": "Use cloud-based backup",
+              "D": "Encrypt all backup copies",
+              "E": "Keep backup copies on multiple hard drives"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 100,
+            "question": "Which of the following characterizes sleep mode for a computer?",
+            "options": {
+              "A": "No energy usage with session data stored in RAM",
+              "B": "Low energy usage with session data stored in RAM",
+              "C": "Low energy usage with session data stored on the HDD/SSD",
+              "D": "No energy usage with session data stored on the HDD/SSD"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 101,
+            "question": "Which of the following connectors supports both high-definition video and audio?",
+            "options": {
+              "A": "S-video",
+              "B": "Component",
+              "C": "HDMI",
+              "D": "DVI"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 102,
+            "question": "Which of the following MOST accurately characterizes malicious software that requires the end-user to pay a fee or risk the destruction of their files?",
+            "options": {
+              "A": "Trojan",
+              "B": "Virus",
+              "C": "Spyware",
+              "D": "Ransomware"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "id": 103,
+            "question": "Which of the following measures should be taken to minimize the risk of sensitive passwords being compromised while browsing the Internet?",
+            "options": {
+              "A": "Activate software firewalls to block unfamiliar ports",
+              "B": "Deactivate autofill of forms and passwords",
+              "C": "Activate screensavers and timeouts on the computer",
+              "D": "Utilize ad-blocking software on the computer"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 104,
+            "question": "A student wants to exchange contacts with another student's mobile device. What would be the simplest method to use?",
+            "options": {
+              "A": "Network-Attached Storage",
+              "B": "Bluetooth sharing",
+              "C": "Local hard drive",
+              "D": "Peer-to-Peer network"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 105,
+            "question": "When configuring a new desktop, what should be done initially?",
+            "options": {
+              "A": "Configure user accounts",
+              "B": "Plug in cables",
+              "C": "Install security software",
+              "D": "Configure wireless network settings"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 106,
+            "question": "Which of the following patching methods enables vendor-controlled updates, minimizes user interaction, and enhances the security of the operating system or application?",
+            "options": {
+              "A": "Upgrading on a periodic basis",
+              "B": "Frequent patching",
+              "C": "Automatic updates",
+              "D": "Patching scheduled daily"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 107,
+            "question": "Which of the following is a rationale for considering password complexity a best practice?",
+            "options": {
+              "A": "It makes passwords more challenging to crack",
+              "B": "It motivates users to write down passwords to avoid forgetting them",
+              "C": "It compels users to develop typing skills",
+              "D": "It dissuades users from using the same password across different accounts"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 108,
+            "question": "A user gets an email with a link. When they hover the mouse over the link, the actual URL doesn't match the text in the email body and seems to be a string of random characters. What is the BEST action to take?",
+            "options": {
+              "A": "Send the email to a friend to seek advice",
+              "B": "Respond to the sender to confirm whether it is safe to open",
+              "C": "Remove the email without clicking on the link",
+              "D": "Open the link because there is malware protection software installed on the computer"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 109,
+            "question": "Which of the following elements functions temporary storage for computer operations?",
+            "options": {
+              "A": "System board",
+              "B": "CPU",
+              "C": "RAM",
+              "D": "Expansion card"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 110,
+            "question": "Understanding computers all around us and having knowledge of their functioning is referred to as",
+            "options": {
+              "A": "Computer Science",
+              "B": "Technology Information",
+              "C": "Digital Literacy",
+              "D": "Computer Literacy"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 111,
+            "question": "What are the four phases of the computing process?",
+            "options": {
+              "A": "Typing, calculating, speaking, and saving",
+              "B": "Input, processing, output, and storage",
+              "C": "Powering on the device, requesting information, receiving information, and powering down the device",
+              "D": "Input, number crunching, output and printing"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 112,
+            "question": "How does the device indicate that it has acknowledged your processing request?",
+            "options": {
+              "A": "Input",
+              "B": "Processing",
+              "C": "Output",
+              "D": "Storage"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 113,
+            "question": "The capacity to incorporate applications into a general computing device enhances its",
+            "options": {
+              "A": "Functionality",
+              "B": "Value",
+              "C": "Entertainment value",
+              "D": "Complexity"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 114,
+            "question": "What term denotes a collection of computers or other network devices in close proximity that can exchange information?",
+            "options": {
+              "A": "WAN",
+              "B": "PC",
+              "C": "LAN",
+              "D": "Switch"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 115,
+            "question": "Servers enabling access to applications not locally installed for local users are referred to as",
+            "options": {
+              "A": "Online applications",
+              "B": "LANs",
+              "C": "The Internet",
+              "D": "Remotely-accessed computer systems"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "id": 116,
+            "question": "Which of the following is NOT a dedicated computing device?",
+            "options": {
+              "A": "Thermostat",
+              "B": "Printer",
+              "C": "iPhone",
+              "D": "Point-of-Sale terminal"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 117,
+            "question": "In modern computers, the CPU informs the about the required clock speed, and the clock chip then automatically adapts to match the CPU.",
+            "options": {
+              "A": "The address bus",
+              "B": "The hard disk",
+              "C": "The motherboard",
+              "D": "RAM"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 118,
+            "question": "Which kind of printer employs a fine powder-like substance to produce images on paper?",
+            "options": {
+              "A": "Laser printer",
+              "B": "Inkjet printer",
+              "C": "Solid ink printer",
+              "D": "LED printer"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 119,
+            "question": "What part of the system memory setup is most user-configurable?",
+            "options": {
+              "A": "ROM (Read-Only Memory)",
+              "B": "Cache Memory",
+              "C": "Virtual Memory",
+              "D": "RAM (Random Access Memory)"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 120,
+            "question": "Which of the following is a task that an operating system does not perform?",
+            "options": {
+              "A": "Coordinate software applications",
+              "B": "Interface between the user and the machine",
+              "C": "Monitor system health",
+              "D": "Coordinate hardware components"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 121,
+            "question": "Which two of the following options represent wireless networking technologies?",
+            "options": {
+              "A": "Bluetooth",
+              "B": "RJ-45",
+              "C": "NFC",
+              "D": "DVI"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 122,
+            "question": "Your friend Michael is configuring a wireless network and seeks your advice on the most secure security option to choose. What do you recommend?",
+            "options": {
+              "A": "WPA2",
+              "B": "NAT",
+              "C": "WPA",
+              "D": "WEP"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 123,
+            "question": "Which of the following is composed of columns and rows containing numerical or text data?",
+            "options": {
+              "A": "Relational database",
+              "B": "Document database",
+              "C": "Key/value database",
+              "D": "Database dump"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 124,
+            "question": "Clarify the logic of the following statement: if the age is less than 20, categorize as \"Teen\"; if the age is less than 65, categorize as \"Adult\"; otherwise, categorize as \"Senior\". For an individual aged 20, which category will they belong to?",
+            "options": {
+              "A": "Child",
+              "B": "Senior",
+              "C": "Adult",
+              "D": "Teen"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 125,
+            "question": "Which device is considered a general-purpose computing device?",
+            "options": {
+              "A": "Xbox One",
+              "B": "Smartphone",
+              "C": "Apple iPod",
+              "D": "Digital watch"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 126,
+            "question": "You want to choose the video connector that offers the highest resolution. Which one should you select?",
+            "options": {
+              "A": "Component",
+              "B": "DVI",
+              "C": "VGA",
+              "D": "HDMI"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "id": 127,
+            "question": "What does CPU stand for?",
+            "options": {
+              "A": "Central Processing Unit",
+              "B": "Computer Processing Unit",
+              "C": "Central Peripheral Unit",
+              "D": "Central Power Unit"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 128,
+            "question": "What is the purpose of RAM in a computer?",
+            "options": {
+              "A": "Long-term storage",
+              "B": "Temporary storage",
+              "C": "Permanent storage",
+              "D": "Data input"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 129,
+            "question": "Which type of software manages hardware resources and provides a user interface?",
+            "options": {
+              "A": "Application software",
+              "B": "System software",
+              "C": "Utility software",
+              "D": "Network software"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 130,
+            "question": "What is the purpose of an Operating System?",
+            "options": {
+              "A": "Manages hardware resources and provides interface",
+              "B": "Runs specific applications",
+              "C": "Both A and B",
+              "D": "None of the above"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 131,
+            "question": "What does the acronym URL stand for?",
+            "options": {
+              "A": "Universal Resource Locator",
+              "B": "Uniform Resource Locator",
+              "C": "Unified Resource Locator",
+              "D": "User Resource Locator"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 132,
+            "question": "Which network device operates at Layer 2 of the OSI model?",
+            "options": {
+              "A": "Router",
+              "B": "Switch",
+              "C": "Hub",
+              "D": "Bridge"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 133,
+            "question": "What is the purpose of a firewall in network security?",
+            "options": {
+              "A": "Detects and removes viruses",
+              "B": "Monitors network traffic and blocks unauthorized access",
+              "C": "Encrypts data transmissions",
+              "D": "Manages IP addresses"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 134,
+            "question": "Which file extension is commonly associated with a compressed archive?",
+            "options": {
+              "A": ".txt",
+              "B": ".zip",
+              "C": ".exe",
+              "D": ".docx"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 135,
+            "question": "What is the purpose of an IP address?",
+            "options": {
+              "A": "Identifies a device on the internet, or a local network",
+              "B": "Manages file storage",
+              "C": "Executes computer programs",
+              "D": "Controls peripheral devices"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 136,
+            "question": "Which of the following is an example of an input device?",
+            "options": {
+              "A": "Printer",
+              "B": "Monitor",
+              "C": "Keyboard",
+              "D": "Speaker"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 137,
+            "question": "What is the purpose of a DNS server?",
+            "options": {
+              "A": "Manages network security",
+              "B": "Resolves domain names to IP addresses",
+              "C": "Filters internet content",
+              "D": "Allocates IP addresses dynamically"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 138,
+            "question": "Which of the following is a type of malware that disguises itself as legitimate software?",
+            "options": {
+              "A": "Spyware",
+              "B": "Adware",
+              "C": "Trojan horse",
+              "D": "Worm"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 139,
+            "question": "What is the primary purpose of a router in a network?",
+            "options": {
+              "A": "Connects devices within a local network",
+              "B": "Filters and forwards data between different networks",
+              "C": "Amplifies network signals",
+              "D": "Provides wireless connectivity"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 140,
+            "question": "What is the function of antivirus software?",
+            "options": {
+              "A": "Detects and removes malicious software",
+              "B": "Optimizes computer performance",
+              "C": "Manages network traffic",
+              "D": "Encrypts files and folders"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 141,
+            "question": "Which programming language is commonly used for creating dynamic web pages?",
+            "options": {
+              "A": "Java",
+              "B": "PHP",
+              "C": "C++",
+              "D": "Python"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 142,
+            "question": "What does the acronym HTML stand for?",
+            "options": {
+              "A": "Hypertext Markup Language",
+              "B": "Hyperlink and Text Markup Language",
+              "C": "High-Level Text Markup Language",
+              "D": "Hypertext and Table Markup Language"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 143,
+            "question": "What is the purpose of a Uninterruptible Power Supply (UPS) for a computer?",
+            "options": {
+              "A": "Increases processing speed",
+              "B": "Provides backup power during outages",
+              "C": "Enhances network security",
+              "D": "Filters internet content"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 144,
+            "question": "Which type of backup makes a copy of all selected files regardless of whether they have changed since the last backup?",
+            "options": {
+              "A": "Incremental backup",
+              "B": "Full backup",
+              "C": "Differential backup",
+              "D": "Mirror backup"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 145,
+            "question": "What is the purpose of the Basic Input/Output System (BIOS) in a computer?",
+            "options": {
+              "A": "Manages network connections",
+              "B": "Executes application software",
+              "C": "Boots the computer and initializes hardware",
+              "D": "Provides storage for user data"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "id": 146,
+            "question": "Which of the following is a type of wireless communication technology used for short-range data exchange between devices?",
+            "options": {
+              "A": "GPS",
+              "B": "NFC (Near Field Communication)",
+              "C": "Bluetooth",
+              "D": "Wi-Fi"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "id": 147,
+            "question": "What two things are configured on a disk to make storage space on the disk available to the Windows OS?",
+            "options": {
+              "A": "File system and partition table",
+              "B": "BIOS settings and disk label",
+              "C": "File permissions and disk encryption",
+              "D": "Disk controller and disk cache"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 148,
+            "question": "Which storage type retains data even when the power is turned off?",
+            "options": {
+              "A": "RAM",
+              "B": "ROM",
+              "C": "Cache",
+              "D": "HDD"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "id": 149,
+            "question": "What protection feature in Windows is designed to prevent a script or software from making unauthorized changes to the OS configuration?",
+            "options": {
+              "A": "User Account Control (UAC)",
+              "B": "Windows Defender Firewall",
+              "C": "Windows Update",
+              "D": "BitLocker Drive Encryption"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "id": 150,
+            "question": "Which protocol is used for sending emails?",
+            "options": {
+              "A": "FTP",
+              "B": "SMTP",
+              "C": "HTTP",
+              "D": "DHCP"
+            },
+            "correct_answer": "B"
           }
-        ]
-      },
-
-{
-  "questions": [
-    {
-      "id": 21,
-      "question": "Which of the following enables communication between wireless devices and a wired network?",
-      "options": {
-        "A": "Modem",
-        "B": "Switch",
-        "C": "Firewall",
-        "D": "Access point"
-      },
-      "correct_answer": "D"
-    },
-    {
-      "id": 22,
-      "question": "Which of the following computing devices is utilized to distribute services to a group of clients centrally and typically plays a role on a Local Area Network (LAN)?",
-      "options": {
-        "A": "Laptop",
-        "B": "Workstation",
-        "C": "Mobile phone",
-        "D": "Server"
-      },
-      "correct_answer": "D"
-    },
-    {
-      "id": 23,
-      "question": "Which term among the following refers to a database element that corresponds to the unique identifier in the parent table?",
-      "options": {
-        "A": "Attribute",
-        "B": "Constraint",
-        "C": "Foreign key",
-        "D": "Primary Key"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 24,
-      "question": "For which purpose is a relational database management system most frequently employed among the following?",
-      "options": {
-        "A": "Building flowcharts",
-        "B": "Storing information",
-        "C": "Generating reports",
-        "D": "Creating diagrams"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 25,
-      "question": "Which of the following descriptions best characterizes an application operating within a typical operating system?",
-      "options": {
-        "A": "Process",
-        "B": "Thread",
-        "C": "Function",
-        "D": "Task"
-      },
-      "correct_answer": "A"
-    },
-    {
-      "id": 26,
-      "question": "What is the most critical factor to consider before allowing remote access to a server reachable from both the company network and the Internet?",
-      "options": {
-        "A": "The type of computer used for the connection",
-        "B": "The security measure employed to allow connections",
-        "C": "The internet speeds provided by employees' home ISPs",
-        "D": "The geographical locations of the employees"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 27,
-      "question": "What function of an operating system is performed by the 'shell'?",
-      "options": {
-        "A": "Memory management",
-        "B": "File management",
-        "C": "User interface",
-        "D": "Device management"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 28,
-      "question": "After confirming a hypothesis's validity during issue diagnosis, what course of action should the technician take next?",
-      "options": {
-        "A": "Execute the solution",
-        "B": "Record acquired knowledge",
-        "C": "Formulate an action plan",
-        "D": "Validate the complete functionality of the system"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 29,
-      "question": "Joe, a user, discovers that his password for a social media site has been compromised. When he informs a friend that his email and banking accounts are also compromised, what is the most likely action Joe has taken?",
-      "options": {
-        "A": "Reusing passwords",
-        "B": "Snooping",
-        "C": "Social engineering",
-        "D": "Phishing"
-      },
-      "correct_answer": "A"
-    },
-    {
-      "id": 30,
-      "question": "What is the primary element Joe, a developer, would likely utilize to store a variable number that alters the execution of his program?",
-      "options": {
-        "A": "Loop",
-        "B": "Variable",
-        "C": "Constant",
-        "D": "Function"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 31,
-      "question": "For creating a website, which language type would a web developer be most inclined to use?",
-      "options": {
-        "A": "Interpreted",
-        "B": "Query",
-        "C": "Compiled",
-        "D": "Assembly"
-      },
-      "correct_answer": "A"
-    },
-    {
-      "id": 32,
-      "question": "A user encounters an error message while attempting to access a website. To gather more information about the issue, a technician poses questions to the user and then accesses the same site using a local browser. In this scenario, which of the following troubleshooting steps is the technician employing by visiting the same site?",
-      "options": {
-        "A": "Establish a plan of action",
-        "B": "Gather information",
-        "C": "Duplicate the problem",
-        "D": "Find the root cause"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 33,
-      "question": "Which of the subsequent software license models permits a developer to alter the original code and distribute their version of the application?",
-      "options": {
-        "A": "Proprietary software",
-        "B": "Commercial software",
-        "C": "Open-source software",
-        "D": "Cross-platform software"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 34,
-      "question": "The company president has sought help in selecting a suitable Internet connection for her residence, which is situated in a remote area without access to existing infrastructure. Which of the following types of Internet services would be the most suitable in this scenario?",
-      "options": {
-        "A": "Fiber",
-        "B": "DSL",
-        "C": "Cable",
-        "D": "Satellite"
-      },
-      "correct_answer": "D"
-    },
-    {
-      "id": 35,
-      "question": "An administrator authorizes a user to retrieve data from a database. Which of the following actions has been executed?",
-      "options": {
-        "A": "Data correlation",
-        "B": "Data manipulation",
-        "C": "Data Control",
-        "D": "Data definition"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 36,
-      "question": "What concept is demonstrated when a company, during a disaster recovery drill, chooses to recover customer data before operational data?",
-      "options": {
-        "A": "Redundancy",
-        "B": "Replication",
-        "C": "Prioritization",
-        "D": "Fault tolerance"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 37,
-      "question": "A technician is tasked with installing a wireless router for a client that is capable of speeds up to 11 Mbps and functions on the 2.4GHz band. In this scenario, which of the following options should the technician choose?",
-      "options": {
-        "A": "802.11a",
-        "B": "802.11b",
-        "D": "802.11n"
-    },
-    "correct_answer": "B"
-  }
-]
-},
-
-{
-  "questions": [
-    {
-      "id": 38,
-      "question": "The IT department has implemented a new password policy for employees, stipulating the following:\n● Passwords should not include common dictionary words\n● Passwords must incorporate at least one special character\n● Passwords must differ from the previous six passwords used\n● Passwords must include at least one capital letter or number\nWhich two of the following practices are being utilized?",
-      "options": {
-        "A": "Password lockout",
-        "B": "Password complexity",
-        "C": "Password expiration",
-        "D": "Password history",
-        "E": "Password length",
-        "F": "Password age"
-      },
-      "correct_answer": "B, D"
-    },
-    {
-      "id": 39,
-      "question": "A technician is setting up a new wireless network and aims to safeguard it against unauthorized access. In terms of security, which of the following protocols would be the most secure?",
-      "options": {
-        "A": "WPA",
-        "B": "SSID",
-        "C": "WEP",
-        "D": "WPA2"
-      },
-      "correct_answer": "D"
-    },
-    {
-      "id": 40,
-      "question": "Which of the following would be most effectively managed as a flat file rather than being stored in a database?",
-      "options": {
-        "A": "Contact list",
-        "B": "Movie theater locations",
-        "C": "Directions to doctor’s office",
-        "D": "Store inventory"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 41,
-      "question": "Which of the following elements in a relational database is employed to guarantee that appropriate values are inputted for a column?",
-      "options": {
-        "A": "Schema",
-        "B": "Permissions",
-        "C": "Constraint",
-        "D": "Index"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 42,
-      "question": "An end user's computer has been experiencing difficulties in opening its word processing software, and an IT technician has effectively resolved the issue. What would be the technician's most appropriate subsequent action?",
-      "options": {
-        "A": "Reboot the computer",
-        "B": "Reach out to other users",
-        "C": "Unplug the peripherals",
-        "D": "Record the findings"
-      },
-      "correct_answer": "D"
-    },
-    {
-      "id": 43,
-      "question": "What type of file in an operating system is the main means of providing coordination of hardware components?",
-      "options": {
-        "A": "Executable file",
-        "B": "Configuration file",
-        "C": "Device file",
-        "D": "Library file"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 44,
-      "question": "A technician is summoned to replace a display for a workstation. What is the most probable connection type that would be utilized to link the display to the workstation?",
-      "options": {
-        "A": "USB",
-        "B": "NFC",
-        "C": "DSL",
-        "D": "DVI"
-      },
-      "correct_answer": "D"
-    },
-    {
-      "id": 45,
-      "question": "What is an example of an open source operating system?",
-      "options": {
-        "A": "Windows",
-        "B": "macOS",
-        "C": "Linux",
-        "D": "iOS"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 46,
-      "question": "Which of the following intellectual property concepts MOST aptly signifies a legally safeguarded slogan for a business?",
-      "options": {
-        "A": "Contract",
-        "B": "Patent",
-        "C": "Copyright",
-        "D": "Trademark"
-      },
-      "correct_answer": "D"
-    },
-    {
-      "id": 47,
-      "question": "A desktop administrator has recently linked a printer to a workstation, but the workstation is not detecting the printer. What is the MOST probable requirement for the printer to operate on the workstation?",
-      "options": {
-        "A": "Permission",
-        "B": "Power source",
-        "C": "USB cable",
-        "D": "Driver"
-      },
-      "correct_answer": "D"
-    }
-  ]
-},
-{
-    "questions": [
-      {
-        "id": 48,
-        "question": "An employee is tasked with creating a report on a student information system. To accomplish this, the employee utilizes spreadsheet software and connects to a remote database to retrieve data for the report. What type of application architecture did the employee employ?",
-        "options": {
-          "A": "Standalone application",
-          "B": "Client-server application",
-          "C": "Web application",
-          "D": "Cloud application"
-        },
-        "correct_answer": "B"
-      },
-      {
-        "id": 49,
-        "question": "A user is encountering issues with her IP-based security camera at home following a rainstorm that resulted in a power outage. The camera's LED light indicates that it has power. What is the MOST probable problem?",
-        "options": {
-          "A": "The power outage caused a malfunction in the camera",
-          "B": "Ann is facing a compatibility issue with the camera",
-          "C": "The camera requires a firmware update",
-          "D": "Ann's Internet connection and wireless router are still unavailable"
-        },
-        "correct_answer": "D"
-      },
-      {
-        "id": 50,
-        "question": "A regulation mandates that new applicants submit a retina scan to address potential legal queries about the applicant's identity. Which of the following concepts does this exemplify?",
-        "options": {
-          "A": "Non-repudiation",
-          "B": "Authentication",
-          "C": "Integrity",
-          "D": "Accounting"
-        },
-        "correct_answer": "B"
-      },
-      {
-        "id": 51,
-        "question": "What is the benefit of deploying an application to the cloud?",
-        "options": {
-          "A": "Local storage of data is not necessary",
-          "B": "Elimination of support requirements",
-          "C": "Elimination of service needs",
-          "D": "No necessity for internet access"
-        },
-        "correct_answer": "A"
-      },
-      {
-        "id": 52,
-        "question": "A program must select between apples, oranges, or bananas depending on an input. Which of the following programming structures is MOST suitable to use?",
-        "options": {
-          "A": "Variable",
-          "B": "If Statement",
-          "C": "Datatype",
-          "D": "Comment"
-        },
-        "correct_answer": "B"
-      },
-      {
-        "id": 53,
-        "question": "A UPS offers safeguards against:",
-        "options": {
-          "A": "Denial of service attack",
-          "B": "Replay attack",
-          "C": "Power outages",
-          "D": "Wiretapping"
-        },
-        "correct_answer": "C"
-      },
-      {
-        "id": 54,
-        "question": "To watch company training videos from a DVD, which of the following components would fulfill this task?",
-        "options": {
-          "A": "Optical drive",
-          "B": "Hard Disk Drive",
-          "C": "Solid-State Drive",
-          "D": "Flash drive"
-        },
-        "correct_answer": "A"
-      },
-      {
-        "id": 55,
-        "question": "In transferring a file over the network, which of the following would represent the HIGHEST transfer rate?",
-        "options": {
-          "A": "1001 Kbps",
-          "B": "110 Mbps",
-          "C": "1.22 Gbps",
-          "D": "123 Mbps"
-        },
-        "correct_answer": "C"
-      },
-      {
-        "id": 56,
-        "question": "What term is used to describe terminating a process that is not responding to user input?",
-        "options": {
-          "A": "Hibernation",
-          "B": "Synchronization",
-          "C": "Interruption",
-          "D": "Force Quit"
-        },
-        "correct_answer": "D"
-      },
-      {
-        "id": 57,
-        "question": "Which of the following is a unique identifier for a database record?",
-        "options": {
-          "A": "Foreign key",
-          "B": "Public key",
-          "C": "Primary key",
-          "D": "Private key"
-        },
-        "correct_answer": "C"
-      }
     ]
-  },
-  {
-    "questions": [
-      {
-        "id": 58,
-        "question": "A systems administrator intends to retrieve results for a specific time range within a database. Which of the following commands should the administrator use?",
-        "options": {
-          "A": "SELECT",
-          "B": "INSERT",
-          "C": "DELETE",
-          "D": "UPDATE"
-        },
-        "correct_answer": "A"
-      },
-      {
-        "id": 59,
-        "question": "Which of the following denotes a wireless communication method that necessitates devices to be within 4 cm(1.57 inches) proximity for information transfer?",
-        "options": {
-          "A": "Infrared",
-          "B": "NFC",
-          "C": "Bluetooth",
-          "D": "WiFi"
-        },
-        "correct_answer": "B"
-      },
-      {
-        "id": 60,
-        "question": "Which of the following most accurately characterizes a KiloByte?",
-        "options": {
-          "A": "A kilobyte is a unit of storage measurement",
-          "B": "A kilobyte is a unit of throughput measurement",
-          "C": "A kilobyte is a unit of power measurement",
-          "D": "A kilobyte is a unit of processor speed measurement"
-        },
-        "correct_answer": "A"
-      },
-      {
-        "id": 61,
-        "question": "The wireless access point installed recently has a weaker broadcast signal than anticipated. Which of the following measures would be most effective in enhancing the signal strength?",
-        "options": {
-          "A": "Upgrade from 802.11b to 802.11g",
-          "B": "Eliminate sources of electromagnetic interference (EMI)",
-          "C": "Activate WPA2-Enterprise",
-          "D": "Utilize WiFi Protected Setup"
-        },
-        "correct_answer": "B"
-      },
-      {
-        "id": 62,
-        "question": "Which of the following security issues poses a risk to confidentiality?",
-        "options": {
-          "A": "Replay attack",
-          "B": "Denial-of-Service attack",
-          "C": "Service outage",
-          "D": "Dumpster diving"
-        },
-        "correct_answer": "A"
-      },
-      {
-        "id": 63,
-        "question": "A startup company has designed a logo and aims to prevent any other entity from using it for any purpose. Which two of the following measures should the company employ for the BEST protection?",
-        "options": {
-          "A": "Patent",
-          "B": "Copyright",
-          "C": "Non-Disclosure Agreement (NDA)",
-          "D": "Trademark",
-          "E": "EULA (End User License Agreement)"
-        },
-        "correct_answer": "B"
-      },
-      {
-        "id": 64,
-        "question": "What is the MOST probable choice for representing international text data?",
-        "options": {
-          "A": "ASCII",
-          "B": "Octal",
-          "C": "Hexadecimal",
-          "D": "Unicode"
-        },
-        "correct_answer": "D"
-      },
-      {
-        "id": 65,
-        "question": "What is the last step in the standard troubleshooting methodology?",
-        "options": {
-          "A": "Document the solution and cause",
-          "B": "Formulate a new theory of cause",
-          "C": "Conduct online research on the problem",
-          "D": "Implement preventive measures"
-        },
-        "correct_answer": "A"
-      },
-      {
-        "id": 66,
-        "question": "What is the program employed by a systems administrator to directly interact with hardware, managing storage, network, and virtual machines, an instance of?",
-        "options": {
-          "A": "A storage area network",
-          "B": "An embedded OS",
-          "C": "Network-attached storage",
-          "D": "A Type 1 hypervisor"
-        },
-        "correct_answer": "D"
-      },
-      {
-        "id": 67,
-        "question": "Which two of the following Operating Systems can execute a program without requiring file extensions?",
-        "options": {
-          "A": "Windows 7",
-          "B": "Windows 8",
-          "C": "UNIX",
-          "D": "Windows Server 2012",
-          "E": "Android",
-          "F": "Linux"
-        },
-        "correct_answer": "C"
-      }
-    ]
-  },
-  {
-    "questions": [
-      {
-        "id": 68,
-        "question": "What should a user configure on a laptop to ensure that substantial personal and confidential data remains inaccessible if the laptop is stolen?",
-        "options": {
-          "A": "Encryption",
-          "B": "Compression",
-          "C": "Permissions",
-          "D": "Auditing"
-        },
-        "correct_answer": "A"
-      },
-      {
-        "id": 69,
-        "question": "Which of the following languages is compiled?",
-        "options": {
-          "A": "Perl",
-          "B": "JavaScript",
-          "C": "Java",
-          "D": "PowerShell"
-        },
-        "correct_answer": "C"
-      },
-      {
-        "id": 70,
-        "question": "A user encounters an error when trying to print a document to a wireless printer, with a message stating the operation could not be completed. What action should the user take to address this issue?",
-        "options": {
-          "A": "Confirm that both devices are connected to the LAN",
-          "B": "Enable task scheduling",
-          "C": "Reset the proxy settings to their default values",
-          "D": "Review the fault tolerance configurations"
-        },
-        "correct_answer": "A"
-      },
-      {
-        "id": 71,
-        "question": "What are the fundamental computing operations?",
-        "options": {
-          "A": "Input, process, output, and feedback",
-          "B": "Input, output, storage, and feedback",
-          "C": "Input, process, and output",
-          "D": "Input, process, output, and storage"
-        },
-        "correct_answer": "D"
-      },
-      {
-        "id": 72,
-        "question": "Which of the following is MOST likely to prevent malware sent as a compromised file via email from infecting a person’s computer?",
-        "options": {
-          "A": "Email previewing",
-          "B": "Patching",
-          "C": "Clearing browsing cache",
-          "D": "Killing processes"
-        },
-        "correct_answer": "B"
-      },
-      {
-        "id": 73,
-        "question": "A programmer needs to store output in a location that can be accessed as quickly as possible, and the data doesn't need to be persistent. Which of the following is the BEST option for storing the data?",
-        "options": {
-          "A": "Flat file",
-          "B": "Memory",
-          "C": "Relational database",
-          "D": "Solid-State Drive"
-        },
-        "correct_answer": "B"
-      },
-      {
-        "id": 74,
-        "question": "Which of the following statements MOST accurately characterizes binary?",
-        "options": {
-          "A": "A notational system is employed to signify an 'on' or 'off' state",
-          "B": "A notational system is utilized to indicate media access control",
-          "C": "A notational system is employed to represent Internet protocol addressing",
-          "D": "A notational system is utilized to represent a storage unit of measurement"
-        },
-        "correct_answer": "A"
-      },
-      {
-        "id": 75,
-        "question": "The Task Scheduler allows you to run a process automatically in Windows. What is a widely used Linux equivalent?",
-        "options": {
-          "A": "Kernel Dispatcher",
-          "B": "System Monitor",
-          "C": "Cron",
-          "D": "Daemon Manager"
-        },
-        "correct_answer": "C"
-      }
-    ]
-  },
-  {
-    "questions": [
-      {
-        "id": 76,
-        "question": "Which of the following exemplifies Authentication?",
-        "options": {
-          "A": "Password and passphrase",
-          "B": "Fingerprint and retina scan",
-          "C": "Hardware tokens and smartphone",
-          "D": "Smart card and PIN"
-        },
-        "correct_answer": "C"
-      },
-      {
-        "id": 77,
-        "question": "A developer is formulating precise, sequential instructions and conditional statements for a computer program to solve problems. What is the developer creating?",
-        "options": {
-          "A": "Algorithm",
-          "B": "Software",
-          "C": "Pseudocode",
-          "D": "Flowchart"
-        },
-        "correct_answer": "A"
-      },
-      {
-        "id": 78,
-        "question": "When sending and receiving Internet email, which of the following network protocols are MOST likely to be used? (Select TWO.)",
-        "options": {
-          "A": "SMTP",
-          "B": "POP3",
-          "C": "SNMP",
-          "D": "DHCP",
-          "E": "ICMP",
-          "F": "SFTP"
-        },
-        "correct_answer": "A"
-      },
-      {
-        "id": 79,
-        "question": "A user has completed the initial setup wizard for the Operating System. What would be the most critical next step for the user to take?",
-        "options": {
-          "A": "Confirm Internet connectivity",
-          "B": "Install productivity software",
-          "C": "Install security software",
-          "D": "Add additional user accounts"
-        },
-        "correct_answer": "C"
-      },
-      {
-        "id": 80,
-        "question": "Which of the following technologies enables a user to operate multiple Operating Systems simultaneously on a single computer?",
-        "options": {
-          "A": "Telepresence",
-          "B": "Cloud-based software",
-          "C": "Virtualization software",
-          "D": "Productivity software"
-        },
-        "correct_answer": "C"
-      },
-      {
-        "id": 81,
-        "question": "A user wishes to update a driver to access additional features. Where should the user find the most recent version of the driver from an official source?",
-        "options": {
-          "A": "Manufacturer’s CD/DVD that accompanied the computer",
-          "B": "Manufacturer’s official website",
-          "C": "Internet community support forums",
-          "D": "Third-party support websites"
-        },
-        "correct_answer": "B"
-      },
-      {
-        "id": 82,
-        "question": "What action should be taken to minimize physical safety risks surrounding a recently installed computer?",
-        "options": {
-          "A": "Ensure all connections are properly seated",
-          "B": "Refrain from positioning other computers nearby",
-          "C": "Secure loose cables using zip ties or Velcro straps",
-          "D": "Connect all peripherals to the computer"
-        },
-        "correct_answer": "C"
-      },
-      {
-        "id": 83,
-        "question": "A user with an outdated operating system frequently accesses sensitive websites like banking, email, and corporate intranets using a web browser that has lost patch support and is no longer updated. What action will address this situation?",
-        "options": {
-          "A": "Remove all unused browser extensions and toolbars to minimize risks.",
-          "B": "Upgrade the user's account to an admin-level account for enhanced overall security.",
-          "C": "Switch to an alternative browser that receives regular security updates.",
-          "D": "Install several anti-malware and firewall products to enhance the computing experience."
-        },
-        "correct_answer": "C"
-      },
-      {
-        "id": 84,
-        "question": "Which of the following connectors is MOST frequently employed to link a computer to a network?",
-        "options": {
-          "A": "RJ-45",
-          "B": "RJ-11",
-          "C": "IDE",
-          "D": "eSATA"
-        },
-        "correct_answer": "A"
-      },
-      {
-        "id": 85,
-        "question": "A user is setting up a new scanner on a computer. What is MOST likely to be installed to enable this device to function?",
-        "options": {
-          "A": "License key",
-          "B": "OS update",
-          "C": "Firmware",
-          "D": "Driver"
-        },
-        "correct_answer": "D"
-      }
-    ]
-  },
-  {
-    "questions": [
-      {
-        "id": 86,
-        "question": "Which of the following types of software is employed to decrease the size of a file or folder?",
-        "options": {
-          "A": "Desktop publishing",
-          "B": "Basic database",
-          "C": "Compression",
-          "D": "Anti-malware"
-        },
-        "correct_answer": "C"
-      },
-      {
-        "id": 87,
-        "question": "Which of the following is employed alongside a touch screen to enhance accuracy?",
-        "options": {
-          "A": "Touchpad",
-          "B": "Stylus pen",
-          "C": "Joystick",
-          "D": "Trackball"
-        },
-        "correct_answer": "B"
-      },
-      {
-        "id": 88,
-        "question": "Which of the following internal components is utilized for temporary data storage in a workstation?",
-        "options": {
-          "A": "Power supply",
-          "B": "CPU",
-          "C": "RAM",
-          "D": "Hard drive"
-        },
-        "correct_answer": "C"
-      },
-      {
-        "id": 89,
-        "question": "Which of the following is employed for the temporary storage of program data that is erased when the computer is turned off?",
-        "options": {
-          "A": "CPU",
-          "B": "SSD",
-          "C": "Hard drive",
-          "D": "System memory"
-        },
-        "correct_answer": "D"
-      },
-      {
-        "id": 90,
-        "question": "Which of the following is utilized for persistent data storage over the long term?",
-        "options": {
-          "A": "SSD",
-          "B": "ESD",
-          "C": "PSU",
-          "D": "RAM"
-        },
-        "correct_answer": "A"
-      },
-      {
-        "id": 91,
-        "question": "Which two of the following are advisable measures to take when generating a password?",
-        "options": {
-          "A": "Utilize personal identifiable information",
-          "B": "Employ the same password across multiple systems",
-          "C": "Use a phrase that is easy to recall",
-          "D": "Utilize mixed case letters",
-          "E": "Include special characters"
-        },
-        "correct_answer": "D"
-      },
-      {
-        "id": 92,
-        "question": "Which of the following necessitates user interaction to propagate?",
-        "options": {
-          "A": "Worm",
-          "B": "Adware",
-          "C": "Ransomware",
-          "D": "Virus"
-        },
-        "correct_answer": "D"
-      },
-      {
-        "id": 93,
-        "question": "Ann, a user with a new laptop, is experiencing difficulty printing with her old printer. She confirmed that the printer has connectivity to the laptop. What should Ann examine next?",
-        "options": {
-          "A": "Printer manufacturer’s website",
-          "B": "BIOS settings",
-          "C": "Laptop vendor’s website",
-          "D": "Power cord"
-        },
-        "correct_answer": "A"
-      },
-      {
-        "id": 94,
-        "question": "Which three of the following devices might be necessary for video conferencing?",
-        "options": {
-          "A": "Speakers",
-          "B": "Touch screen",
-          "C": "Microphone",
-          "D": "Webcam",
-          "E": "DVD drive",
-          "F": "Projector"
-        },
-        "correct_answer": "A"
-      },
-      {
-        "id": 95,
-        "question": "Which two of the following are the most rapid methods to transmit a copy of a physical document to a remote user?",
-        "options": {
-          "A": "Scan and email a copy of the document",
-          "B": "Utilize document transcription software",
-          "C": "Retype the document on the user’s computer",
-          "D": "Fax a copy of the document to the user",
-          "E": "Copy and mail the document to the user"
-        },
-        "correct_answer": "A"
-      }
-    ]
-  },
-  {
-    "questions": [
-      {
-        "id": 96,
-        "question": "Ann and Joe, both users, utilize the same computer and log in with the same account. Ann is worried that Joe might check her Internet activity. What can be put in place to prevent both users from examining each other’s Internet activity?",
-        "options": {
-          "A": "Encrypt the computer’s hard drive",
-          "B": "Each user should use a different browser type",
-          "C": "Use a password to protect the shared account",
-          "D": "Configure the browser to clear history upon exit"
-        },
-        "correct_answer": "D"
-      },
-      {
-        "id": 97,
-        "question": "What is the main function of a computer’s case fan?",
-        "options": {
-          "A": "To dissipate heat from internal components",
-          "B": "To cool the CPU",
-          "C": "To cool the video card",
-          "D": "To improve airflow through the case"
-        },
-        "correct_answer": "A"
-      },
-      {
-        "id": 98,
-        "question": "A technician needs to connect a user’s computer to the network. Which of the following device types would the technician install?",
-        "options": {
-          "A": "Modem",
-          "B": "Ethernet card",
-          "C": "Graphics card",
-          "D": "Daughterboard"
-        },
-        "correct_answer": "B"
-      },
-      {
-        "id": 99,
-        "question": "A user intends to securely back up data for recovery in case of a natural disaster. Which two of the following is the BEST solution?",
-        "options": {
-          "A": "Back up to a NAS on-site",
-          "B": "Back up to tape and send off-site",
-          "C": "Use cloud-based backup",
-          "D": "Encrypt all backup copies",
-          "E": "Keep backup copies on multiple hard drives"
-        },
-        "correct_answer": "B, C"
-      },
-      {
-        "id": 100,
-        "question": "Which of the following characterizes sleep mode for a computer?",
-        "options": {
-          "A": "No energy usage with session data stored in RAM",
-          "B": "Low energy usage with session data stored in RAM",
-          "C": "Low energy usage with session data stored on the HDD/SSD",
-          "D": "No energy usage with session data stored on the HDD/SSD"
-        },
-        "correct_answer": "B"
-      },
-      {
-        "id": 101,
-        "question": "Which of the following connectors supports both high-definition video and audio?",
-        "options": {
-          "A": "S-video",
-          "B": "Component",
-          "C": "HDMI",
-          "D": "DVI"
-        },
-        "correct_answer": "C"
-      },
-      {
-        "id": 102,
-        "question": "Which of the following MOST accurately characterizes malicious software that requires the end-user to pay a fee or risk the destruction of their files?",
-        "options": {
-          "A": "Trojan",
-          "B": "Virus",
-          "C": "Spyware",
-          "D": "Ransomware"
-        },
-        "correct_answer": "D"
-      },
-      {
-        "id": 103,
-        "question": "Which of the following measures should be taken to minimize the risk of sensitive passwords being compromised while browsing the Internet?",
-        "options": {
-          "A": "Activate software firewalls to block unfamiliar ports",
-          "B": "Deactivate autofill of forms and passwords",
-          "C": "Activate screensavers and timeouts on the computer",
-          "D": "Utilize ad-blocking software on the computer"
-        },
-        "correct_answer": "B"
-      },
-      {
-        "id": 104,
-        "question": "A student wants to exchange contacts with another student's mobile device. What would be the simplest method to use?",
-        "options": {
-          "A": "Network-Attached Storage",
-          "B": "Bluetooth sharing",
-          "C": "Local hard drive",
-          "D": "Peer-to-Peer network"
-        },
-        "correct_answer": "B"
-      },
-      {
-        "id": 105,
-        "question": "When configuring a new desktop, what should be done initially?",
-        "options": {
-          "A": "Configure user accounts",
-          "B": "Plug in cables",
-          "C": "Install security software",
-          "D": "Configure wireless network settings"
-        },
-        "correct_answer": "B"
-      }
-    ]
-  },
-  {
-    "questions": [
-      {
-        "id": 106,
-        "question": "Which of the following patching methods enables vendor-controlled updates, minimizes user interaction, and enhances the security of the operating system or application?",
-        "options": {
-          "A": "Upgrading on a periodic basis",
-          "B": "Frequent patching",
-          "C": "Automatic updates",
-          "D": "Patching scheduled daily"
-        },
-        "correct_answer": "C"
-      },
-      {
-        "id": 107,
-        "question": "Which of the following is a rationale for considering password complexity a best practice?",
-        "options": {
-          "A": "It makes passwords more challenging to crack",
-          "B": "It motivates users to write down passwords to avoid forgetting them",
-          "C": "It compels users to develop typing skills",
-          "D": "It dissuades users from using the same password across different accounts"
-        },
-        "correct_answer": "A"
-      },
-      {
-        "id": 108,
-        "question": "A user gets an email with a link. When they hover the mouse over the link, the actual URL doesn't match the text in the email body and seems to be a string of random characters. What is the BEST action to take?",
-        "options": {
-          "A": "Send the email to a friend to seek advice",
-          "B": "Respond to the sender to confirm whether it is safe to open",
-          "C": "Remove the email without clicking on the link",
-          "D": "Open the link because there is malware protection software installed on the computer"
-        },
-        "correct_answer": "C"
-      },
-      {
-        "id": 109,
-        "question": "Which of the following elements functions temporary storage for computer operations?",
-        "options": {
-          "A": "System board",
-          "B": "CPU",
-          "C": "RAM",
-          "D": "Expansion card"
-        },
-        "correct_answer": "C"
-      },
-      {
-        "id": 110,
-        "question": "Understanding computers all around us and having knowledge of their functioning is referred to as",
-        "options": {
-          "A": "Computer Science",
-          "B": "Technology Information",
-          "C": "Digital Literacy",
-          "D": "Computer Literacy"
-        },
-        "correct_answer": "C"
-      },
-      {
-        "id": 111,
-        "question": "What are the four phases of the computing process?",
-        "options": {
-          "A": "Typing, calculating, speaking, and saving",
-          "B": "Input, processing, output, and storage",
-          "C": "Powering on the device, requesting information, receiving information, and powering down the device",
-          "D": "Input, number crunching, output and printing"
-        },
-        "correct_answer": "B"
-      },
-      {
-        "id": 112,
-        "question": "How does the device indicate that it has acknowledged your processing request?",
-        "options": {
-          "A": "Input",
-          "B": "Processing",
-          "C": "Output",
-          "D": "Storage"
-        },
-        "correct_answer": "C"
-      },
-      {
-        "id": 113,
-        "question": "The capacity to incorporate applications into a general computing device enhances its",
-        "options": {
-          "A": "Functionality",
-          "B": "Value",
-          "C": "Entertainment value",
-          "D": "Complexity"
-        },
-        "correct_answer": "A"
-      },
-      {
-        "id": 114,
-        "question": "What term denotes a collection of computers or other network devices in close proximity that can exchange information?",
-        "options": {
-          "A": "WAN",
-          "B": "PC",
-          "C": "LAN",
-          "D": "Switch"
-        },
-        "correct_answer": "C"
-      },
-      {
-        "id": 115,
-        "question": "Servers enabling access to applications not locally installed for local users are referred to as",
-        "options": {
-          "A": "Online applications",
-          "B": "LANs",
-          "C": "The Internet",
-          "D": "Remotely-accessed computer systems"
-        },
-        "correct_answer": "D"
-      }
-    ]
-  },
-  {
-    "questions": [
-      {
-        "id": 116,
-        "question": "Which of the following is NOT a dedicated computing device?",
-        "options": {
-          "A": "Thermostat",
-          "B": "Printer",
-          "C": "iPhone",
-          "D": "Point-of-Sale terminal"
-        },
-        "correct_answer": "C"
-      },
-      {
-        "id": 117,
-        "question": "In modern computers, the CPU informs the about the required clock speed, and the clock chip then automatically adapts to match the CPU.",
-        "options": {
-          "A": "The address bus",
-          "B": "The hard disk",
-          "C": "The motherboard",
-          "D": "RAM"
-        },
-        "correct_answer": "C"
-      },
-      {
-        "id": 118,
-        "question": "Which kind of printer employs a fine powder-like substance to produce images on paper?",
-        "options": {
-          "A": "Laser printer",
-          "B": "Inkjet printer",
-          "C": "Solid ink printer",
-          "D": "LED printer"
-        },
-        "correct_answer": "A"
-      },
-      {
-        "id": 119,
-        "question": "What part of the system memory setup is most user-configurable?",
-        "options": {
-          "A": "ROM (Read-Only Memory)",
-          "B": "Cache Memory",
-          "C": "Virtual Memory",
-          "D": "RAM (Random Access Memory)"
-        },
-        "correct_answer": "C"
-      },
-      {
-        "id": 120,
-        "question": "Which of the following is a task that an operating system does not perform?",
-        "options": {
-          "A": "Coordinate software applications",
-          "B": "Interface between the user and the machine",
-          "C": "Monitor system health",
-          "D": "Coordinate hardware components"
-        },
-        "correct_answer": "C"
-      },
-      {
-        "id": 121,
-        "question": "Which two of the following options represent wireless networking technologies?",
-        "options": {
-          "A": "Bluetooth",
-          "B": "RJ-45",
-          "C": "NFC",
-          "D": "DVI"
-        },
-        "correct_answer": "A, C"
-      },
-      {
-        "id": 122,
-        "question": "Your friend Michael is configuring a wireless network and seeks your advice on the most secure security option to choose. What do you recommend?",
-        "options": {
-          "A": "WPA2",
-          "B": "NAT",
-          "C": "WPA",
-          "D": "WEP"
-        },
-        "correct_answer": "A"
-      },
-      {
-        "id": 123,
-        "question": "Which of the following is composed of columns and rows containing numerical or text data?",
-        "options": {
-          "A": "Relational database",
-          "B": "Document database",
-          "C": "Key/value database",
-          "D": "Database dump"
-        },
-        "correct_answer": "A"
-      },
-      {
-        "id": 124,
-        "question": "Clarify the logic of the following statement: if the age is less than 20, categorize as \"Teen\"; if the age is less than 65, categorize as \"Adult\"; otherwise, categorize as \"Senior\". For an individual aged 20, which category will they belong to?",
-        "options": {
-          "A": "Child",
-          "B": "Senior",
-          "C": "Adult",
-          "D": "Teen"
-        },
-        "correct_answer": "C"
-      },
-      {
-        "id": 125,
-        "question": "Which device is considered a general-purpose computing device?",
-        "options": {
-          "A": "Xbox One",
-          "B": "Smartphone",
-          "C": "Apple iPod",
-          "D": "Digital watch"
-        },
-        "correct_answer": "B"
-      }
-    ]
-  },
-  {
-    "questions": [
-      {
-        "id": 126,
-        "question": "You want to choose the video connector that offers the highest resolution. Which one should you select?",
-        "options": {
-          "A": "Component",
-          "B": "DVI",
-          "C": "VGA",
-          "D": "HDMI"
-        },
-        "correct_answer": "D"
-      },
-      {
-        "id": 127,
-        "question": "What does CPU stand for?",
-        "options": {
-          "A": "Central Processing Unit",
-          "B": "Computer Processing Unit",
-          "C": "Central Peripheral Unit",
-          "D": "Central Power Unit"
-        },
-        "correct_answer": "A"
-      },
-      {
-        "id": 128,
-        "question": "What is the purpose of RAM in a computer?",
-        "options": {
-          "A": "Long-term storage",
-          "B": "Temporary storage",
-          "C": "Permanent storage",
-          "D": "Data input"
-        },
-        "correct_answer": "B"
-      },
-      {
-        "id": 129,
-        "question": "Which type of software manages hardware resources and provides a user interface?",
-        "options": {
-          "A": "Application software",
-          "B": "System software",
-          "C": "Utility software",
-          "D": "Network software"
-        },
-        "correct_answer": "B"
-      },
-      {
-        "id": 130,
-        "question": "What is the purpose of an Operating System?",
-        "options": {
-          "A": "Manages hardware resources and provides interface",
-          "B": "Runs specific applications",
-          "C": "Both A and B",
-          "D": "None of the above"
-        },
-        "correct_answer": "C"
-      },
-      {
-        "id": 131,
-        "question": "What does the acronym URL stand for?",
-        "options": {
-          "A": "Universal Resource Locator",
-          "B": "Uniform Resource Locator",
-          "C": "Unified Resource Locator",
-          "D": "User Resource Locator"
-        },
-        "correct_answer": "B"
-      },
-      {
-        "id": 132,
-        "question": "Which network device operates at Layer 2 of the OSI model?",
-        "options": {
-          "A": "Router",
-          "B": "Switch",
-          "C": "Hub",
-          "D": "Bridge"
-        },
-        "correct_answer": "B"
-      },
-      {
-        "id": 133,
-        "question": "What is the purpose of a firewall in network security?",
-        "options": {
-          "A": "Detects and removes viruses",
-          "B": "Monitors network traffic and blocks unauthorized access",
-          "C": "Encrypts data transmissions",
-          "D": "Manages IP addresses"
-        },
-        "correct_answer": "B"
-      },
-      {
-        "id": 134,
-        "question": "Which file extension is commonly associated with a compressed archive?",
-        "options": {
-          "A": ".txt",
-          "B": ".zip",
-          "C": ".exe",
-          "D": ".docx"
-        },
-        "correct_answer": "B"
-      },
-      {
-        "id": 135,
-        "question": "What is the purpose of an IP address?",
-        "options": {
-          "A": "Identifies a device on the internet, or a local network",
-          "B": "Manages file storage",
-          "C": "Executes computer programs",
-          "D": "Controls peripheral devices"
-        },
-        "correct_answer": "A"
-      }
-    ]
-  },
-  {
-    "questions": [
-      {
-        "id": 136,
-        "question": "Which of the following is an example of an input device?",
-        "options": {
-          "A": "Printer",
-          "B": "Monitor",
-          "C": "Keyboard",
-          "D": "Speaker"
-        },
-        "correct_answer": "C"
-      },
-      {
-        "id": 137,
-        "question": "What is the purpose of a DNS server?",
-        "options": {
-          "A": "Manages network security",
-          "B": "Resolves domain names to IP addresses",
-          "C": "Filters internet content",
-          "D": "Allocates IP addresses dynamically"
-        },
-        "correct_answer": "B"
-      },
-      {
-        "id": 138,
-        "question": "Which of the following is a type of malware that disguises itself as legitimate software?",
-        "options": {
-          "A": "Spyware",
-          "B": "Adware",
-          "C": "Trojan horse",
-          "D": "Worm"
-        },
-        "correct_answer": "C"
-      },
-      {
-        "id": 139,
-        "question": "What is the primary purpose of a router in a network?",
-        "options": {
-          "A": "Connects devices within a local network",
-          "B": "Filters and forwards data between different networks",
-          "C": "Amplifies network signals",
-          "D": "Provides wireless connectivity"
-        },
-        "correct_answer": "B"
-      },
-      {
-        "id": 140,
-        "question": "What is the function of antivirus software?",
-        "options": {
-          "A": "Detects and removes malicious software",
-          "B": "Optimizes computer performance",
-          "C": "Manages network traffic",
-          "D": "Encrypts files and folders"
-        },
-        "correct_answer": "A"
-      },
-      {
-        "id": 141,
-        "question": "Which programming language is commonly used for creating dynamic web pages?",
-        "options": {
-          "A": "Java",
-          "B": "PHP",
-          "C": "C++",
-          "D": "Python"
-        },
-        "correct_answer": "B"
-      },
-      {
-        "id": 142,
-        "question": "What does the acronym HTML stand for?",
-        "options": {
-          "A": "Hypertext Markup Language",
-          "B": "Hyperlink and Text Markup Language",
-          "C": "High-Level Text Markup Language",
-          "D": "Hypertext and Table Markup Language"
-        },
-        "correct_answer": "A"
-      },
-      {
-        "id": 143,
-        "question": "What is the purpose of a Uninterruptible Power Supply (UPS) for a computer?",
-        "options": {
-          "A": "Increases processing speed",
-          "B": "Provides backup power during outages",
-          "C": "Enhances network security",
-          "D": "Filters internet content"
-        },
-        "correct_answer": "B"
-      },
-      {
-        "id": 144,
-        "question": "Which type of backup makes a copy of all selected files regardless of whether they have changed since the last backup?",
-        "options": {
-          "A": "Incremental backup",
-          "B": "Full backup",
-          "C": "Differential backup",
-          "D": "Mirror backup"
-        },
-        "correct_answer": "B"
-      },
-      {
-        "id": 145,
-        "question": "What is the purpose of the Basic Input/Output System (BIOS) in a computer?",
-        "options": {
-          "A": "Manages network connections",
-          "B": "Executes application software",
-          "C": "Boots the computer and initializes hardware",
-          "D": "Provides storage for user data"
-        },
-        "correct_answer": "C"
-      }
-    ]
-  },
-  {
-    "questions": [
-      {
-        "id": 146,
-        "question": "Which of the following is a type of wireless communication technology used for short-range data exchange between devices?",
-        "options": {
-          "A": "GPS",
-          "B": "NFC (Near Field Communication)",
-          "C": "Bluetooth",
-          "D": "Wi-Fi"
-        },
-        "correct_answer": "B"
-      },
-      {
-        "id": 147,
-        "question": "What two things are configured on a disk to make storage space on the disk available to the Windows OS?",
-        "options": {
-          "A": "File system and partition table",
-          "B": "BIOS settings and disk label",
-          "C": "File permissions and disk encryption",
-          "D": "Disk controller and disk cache"
-        },
-        "correct_answer": "A"
-      },
-      {
-        "id": 148,
-        "question": "Which storage type retains data even when the power is turned off?",
-        "options": {
-          "A": "RAM",
-          "B": "ROM",
-          "C": "Cache",
-          "D": "HDD"
-        },
-        "correct_answer": "D"
-      },
-      {
-        "id": 149,
-        "question": "What protection feature in Windows is designed to prevent a script or software from making unauthorized changes to the OS configuration?",
-        "options": {
-          "A": "User Account Control (UAC)",
-          "B": "Windows Defender Firewall",
-          "C": "Windows Update",
-          "D": "BitLocker Drive Encryption"
-        },
-        "correct_answer": "A"
-      },
-      {
-        "id": 150,
-        "question": "Which protocol is used for sending emails?",
-        "options": {
-          "A": "FTP",
-          "B": "SMTP",
-          "C": "HTTP",
-          "D": "DHCP"
-        },
-        "correct_answer": "B"
-      }
-    ]
-  }
-
-       
-    ]
-  }
-  
+}
